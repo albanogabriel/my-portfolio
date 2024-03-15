@@ -12,6 +12,24 @@ export const HeaderMobileContainer = styled.header`
     0 4px 8px 0 rgba(0, 0, 0, 0.2),
     0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
+  div {
+    a {
+      list-style: none;
+      text-decoration: none;
+      color: ${({ theme }) => theme.color['gray-050']};
+      font-weight: 400;
+      cursor: pointer;
+
+      span {
+        font-weight: 900;
+      }
+    }
+
+    &:hover {
+      background-color: (${({ theme }) => theme.color['gray-600']});
+    }
+  }
+
   ul {
     display: flex;
     gap: 1rem;
@@ -37,20 +55,34 @@ export const HamburgerMenuIconWithHover = styled.div`
   scale: 1.125;
 
   &:hover {
-    background-color: ${({ theme }) => theme.color['gray-200']};
+    background-color: ${({ theme }) => theme.color['gray-700']};
   }
 `
 
 // mobile menu open
 export const MenuHamburgerContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   position: absolute;
   width: 100%;
   height: 100vh;
   background-color: ${({ theme }) => theme.color['gray-900']};
   opacity: 0.982;
-  padding: 16px;
+  overflow: hidden;
+  /* padding: 16px; */
+
+  span {
+    text-align: left;
+    font-size: 14px;
+    color: ${({ theme }) => theme.color['gray-050']};
+    font-weight: bold;
+    padding: 12px;
+    border-bottom: 1px solid ${({ theme }) => theme.color['gray-600']};
+  }
 
   ul {
+    margin: 8px 16px;
     display: flex;
     flex-direction: column;
     gap: 4px;
@@ -82,6 +114,18 @@ export const MenuHamburgerContainer = styled.div`
 
 // desktop
 export const HeaderDesktopContainer = styled(HeaderMobileContainer)`
+  a {
+    list-style: none;
+    text-decoration: none;
+    color: ${({ theme }) => theme.color['gray-050']};
+    font-weight: 400;
+    cursor: pointer;
+
+    span {
+      font-weight: 900;
+    }
+  }
+
   div {
     width: 50%;
     display: flex;

@@ -37,13 +37,18 @@ export function Header() {
           <>
             <HeaderMobileContainer>
               <div>
-                <span>G</span>
+                <span>
+                  <a href="/">
+                    Ag/<span>portfolio</span>
+                  </a>
+                </span>
               </div>
               <HamburgerMenuIconWithHover onClick={handleOpenMenuHamburger}>
                 <HamburgerMenuIcon />
               </HamburgerMenuIconWithHover>
             </HeaderMobileContainer>
             <MenuHamburgerContainer>
+              <span>Menu</span>
               <ul>
                 <li>
                   <NavLink to={'/about'} title="About">
@@ -71,7 +76,9 @@ export function Header() {
         ) : (
           <HeaderMobileContainer>
             <div>
-              <span>GABRIEL PORTFOLIO</span>
+              <a href="/">
+                albanogabriel/<span>portfolio</span>
+              </a>
             </div>
             <div>
               <HamburgerMenuIconWithHover onClick={handleOpenMenuHamburger}>
@@ -83,7 +90,11 @@ export function Header() {
       ) : (
         <HeaderDesktopContainer>
           <div>
-            <span>GABRIEL PORTFOLIO</span>
+            <div>
+              <a href="/">
+                albanogabriel/<span>portfolio</span>
+              </a>
+            </div>
             <ul>
               <li>
                 <NavLink to={'/about'} title="about">
