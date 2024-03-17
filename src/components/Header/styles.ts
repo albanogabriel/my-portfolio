@@ -1,4 +1,5 @@
-import styled from 'styled-components'
+import { Cross1Icon } from '@radix-ui/react-icons'
+import styled, { keyframes } from 'styled-components'
 
 // mobile
 export const HeaderMobileContainer = styled.header`
@@ -14,6 +15,7 @@ export const HeaderMobileContainer = styled.header`
 
   div {
     a {
+      white-space: nowrap;
       list-style: none;
       text-decoration: none;
       color: ${({ theme }) => theme.color['gray-050']};
@@ -73,11 +75,14 @@ export const MenuHamburgerContainer = styled.div`
   /* padding: 16px; */
 
   span {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     text-align: left;
     font-size: 14px;
     color: ${({ theme }) => theme.color['gray-050']};
     font-weight: bold;
-    padding: 12px;
+    padding: 16px;
     border-bottom: 1px solid ${({ theme }) => theme.color['gray-600']};
   }
 
@@ -112,6 +117,23 @@ export const MenuHamburgerContainer = styled.div`
   }
 `
 
+const rotate360 = keyframes`
+  from {
+    transform: rotate(0deg);
+  } to {
+    transform: rotate(90deg);
+  }
+`
+
+export const StyledCross1Icon = styled(Cross1Icon)`
+  cursor: pointer;
+  margin-right: 8px;
+
+  &:hover {
+    animation: ${rotate360} 0.3s linear;
+  }
+`
+
 // desktop
 export const HeaderDesktopContainer = styled(HeaderMobileContainer)`
   a {
@@ -137,6 +159,7 @@ export const HeaderDesktopContainer = styled(HeaderMobileContainer)`
       transform: translateX(+50%);
 
       a {
+        white-space: nowrap;
         display: flex;
         padding: 4px 12px;
         border-radius: 8px;

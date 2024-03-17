@@ -7,6 +7,7 @@ import {
   HeaderDesktopContainer,
   HeaderMobileContainer,
   MenuHamburgerContainer,
+  StyledCross1Icon,
 } from './styles'
 
 export function Header() {
@@ -30,6 +31,10 @@ export function Header() {
     setHamburgerIsOpen(!hamburgerIsOpen)
   }
 
+  function handleCloseMenuHamburger() {
+    setHamburgerIsOpen(false)
+  }
+
   return (
     <div>
       {isSmallScreen ? (
@@ -48,25 +53,44 @@ export function Header() {
               </HamburgerMenuIconWithHover>
             </HeaderMobileContainer>
             <MenuHamburgerContainer>
-              <span>Menu</span>
+              <span>
+                Menu
+                <StyledCross1Icon onClick={handleCloseMenuHamburger} />
+              </span>
               <ul>
                 <li>
-                  <NavLink to={'/about'} title="About">
+                  <NavLink
+                    onClick={handleCloseMenuHamburger}
+                    to={'/about'}
+                    title="About"
+                  >
                     About
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/cases'} title="Cases">
+                  <NavLink
+                    onClick={handleCloseMenuHamburger}
+                    to={'/cases'}
+                    title="Cases"
+                  >
                     Cases
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/experiences'} title="Experiences">
+                  <NavLink
+                    onClick={handleCloseMenuHamburger}
+                    to={'/experiences'}
+                    title="Experiences"
+                  >
                     Experiences
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to={'/education'} title="Education">
+                  <NavLink
+                    onClick={handleCloseMenuHamburger}
+                    to={'/education'}
+                    title="Education"
+                  >
                     Education
                   </NavLink>
                 </li>
