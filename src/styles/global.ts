@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import styled, { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
   *{
@@ -44,4 +44,30 @@ export const GlobalStyle = createGlobalStyle`
       font-size: 1.125rem;
     }
   }
+`
+
+export const PageContainer = styled.div`
+  //mobile first
+  width: 100%;
+  padding: 32px 24px;
+
+  @media (min-width: 767px) {
+    // desktop
+    max-width: 1400px;
+    margin: 0 auto;
+  }
+`
+export const BigTitle = styled.h1`
+  color: ${({ theme }) => theme.color['gray-050']};
+  font-family: ${({ theme }) => theme.fontFamilies.BigTitle};
+  font-size: ${({ theme }) => theme.textSizes['4xl']};
+  font-weight: 100;
+  line-height: ${({ theme }) => theme.lineHeight.base};
+`
+
+export const SmallParagraph = styled.p`
+  color: ${({ theme }) => theme.color['gray-100']};
+  font-size: ${({ theme }) => theme.textSizes.lg};
+  font-weight: 300;
+  line-height: ${({ theme }) => theme.lineHeight.base};
 `

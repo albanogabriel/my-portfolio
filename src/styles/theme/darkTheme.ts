@@ -45,6 +45,7 @@ export const darkTheme = {
   fontFamilies: {
     default: 'Geist',
     mono: 'monospace',
+    BigTitle: 'Pedanna',
   },
   lineHeight: {
     heading: '1.25',

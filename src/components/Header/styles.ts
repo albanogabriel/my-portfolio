@@ -1,4 +1,9 @@
-import { Cross1Icon } from '@radix-ui/react-icons'
+import {
+  Cross1Icon,
+  GitHubLogoIcon,
+  LinkedInLogoIcon,
+} from '@radix-ui/react-icons'
+import { InstagramLogo } from 'phosphor-react'
 import styled, { keyframes } from 'styled-components'
 
 interface HeaderProps {
@@ -101,25 +106,48 @@ export const HamburgerMenuContainer = styled.div`
   background-color: ${({ theme }) => theme.color['gray-900']};
   opacity: 0.982;
   overflow: hidden;
-  /* padding: 16px; */
 
-  span {
+  div {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    text-align: left;
-    font-size: 14px;
     color: ${({ theme }) => theme.color['gray-050']};
-    font-weight: bold;
     padding: 16px;
     border-bottom: 1px solid ${({ theme }) => theme.color['gray-600']};
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    span {
+      font-size: 16px;
+      font-weight: bold;
+
+      a {
+        color: ${({ theme }) => theme.color['gray-100']};
+        text-decoration: none;
+
+        &:hover {
+          color: ${({ theme }) => theme.color['gray-050']};
+        }
+      }
+    }
   }
 
   ul {
-    margin: 8px 16px;
     display: flex;
+    margin: 8px 16px;
     flex-direction: column;
     gap: 4px;
+
+    span {
+      display: flex;
+      align-self: left;
+      font-weight: bold;
+      padding: 12px;
+    }
 
     li {
       cursor: pointer;
@@ -127,13 +155,14 @@ export const HamburgerMenuContainer = styled.div`
 
       a {
         display: flex;
-        padding: 8px 16px;
+        padding: 6px 12px;
         border-radius: 8px;
         text-decoration: none;
         color: ${({ theme }) => theme.color['gray-100']};
 
         &:hover {
           background-color: ${({ theme }) => theme.color['gray-500']};
+          color: ${({ theme }) => theme.color['gray-050']};
         }
 
         &.active {
@@ -155,12 +184,46 @@ const rotate360 = keyframes`
 `
 
 export const StyledCross1Icon = styled(Cross1Icon)`
+  display: flex;
+  align-items: center;
   cursor: pointer;
   margin-right: 8px;
 
   &:hover {
     color: ${({ theme }) => theme.color['gray-100']};
     animation: ${rotate360} 0.225s linear;
+  }
+`
+
+export const StyledGitHubIcon = styled(GitHubLogoIcon)`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: ${({ theme }) => theme.color['gray-100']};
+
+  &:hover {
+    color: ${({ theme }) => theme.color['gray-050']};
+  }
+`
+export const StyledInstagramLogo = styled(InstagramLogo)`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: ${({ theme }) => theme.color['gray-100']};
+
+  &:hover {
+    color: ${({ theme }) => theme.color['gray-050']};
+  }
+`
+
+export const StyledLinkedin = styled(LinkedInLogoIcon)`
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: ${({ theme }) => theme.color['gray-100']};
+
+  &:hover {
+    color: ${({ theme }) => theme.color['gray-050']};
   }
 `
 
@@ -179,29 +242,42 @@ export const HeaderDesktopContainer = styled(HeaderMobileContainer)`
   }
 
   div {
-    width: 50%;
+    width: 100%;
+    /* width: 50%; */
     display: flex;
     justify-content: space-between;
     align-items: center;
 
     ul {
-      gap: 0.25rem;
-      transform: translateX(+50%);
+      gap: 0.5rem;
+      /* transform: translateX(+50%); */
 
       a {
         white-space: nowrap;
         display: flex;
         padding: 4px 12px;
-        border-radius: 8px;
+        border-radius: 4px;
         text-decoration: none;
         color: ${({ theme }) => theme.color['gray-100']};
 
+        &:hover {
+          // tem que ficar pareado com o react-router-dom, as rotas precisam estar pareadas
+          color: ${({ theme }) => theme.color['gray-050']};
+          background-color: ${({ theme }) => theme.color['gray-500']};
+        }
+
         &.active {
           // tem que ficar pareado com o react-router-dom, as rotas precisam estar pareadas
-          color: ${({ theme }) => theme.color['gray-500']};
+          color: ${({ theme }) => theme.color['gray-700']};
           background-color: ${({ theme }) => theme.color['gray-100']};
         }
       }
+    }
+
+    nav {
+      display: flex;
+      align-items: center;
+      gap: 16px;
     }
   }
 `

@@ -3,6 +3,7 @@ import { useEffect, useState } from 'react'
 import { createPortal } from 'react-dom'
 import { NavLink } from 'react-router-dom'
 
+import { navBarDesktop } from '../../lib/data'
 import {
   HamburgerMenuContainer,
   HamburgerMenuIconWithHover,
@@ -10,6 +11,9 @@ import {
   HeaderMobileContainer,
   PortalContainer,
   StyledCross1Icon,
+  StyledGitHubIcon,
+  StyledInstagramLogo,
+  StyledLinkedin,
 } from './styles'
 
 export function Header() {
@@ -55,57 +59,82 @@ export function Header() {
   return (
     <div>
       {isSmallScreen ? (
-        hamburgerIsOpen ? (
-          createPortal(
-            <PortalContainer>
-              <HamburgerMenuContainer>
-                <span>
-                  Menu
-                  <StyledCross1Icon onClick={handleCloseMenuHamburger} />
-                </span>
-                <ul>
-                  <li>
-                    <NavLink
-                      onClick={handleCloseMenuHamburger}
-                      to={'/about'}
-                      title="About"
-                    >
-                      About
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      onClick={handleCloseMenuHamburger}
-                      to={'/cases'}
-                      title="Cases"
-                    >
-                      Cases
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      onClick={handleCloseMenuHamburger}
-                      to={'/experiences'}
-                      title="Experiences"
-                    >
-                      Experiences
-                    </NavLink>
-                  </li>
-                  <li>
-                    <NavLink
-                      onClick={handleCloseMenuHamburger}
-                      to={'/education'}
-                      title="Education"
-                    >
-                      Education
-                    </NavLink>
-                  </li>
-                </ul>
-              </HamburgerMenuContainer>
-            </PortalContainer>,
-            document.body,
-          )
-        ) : (
+        // mobile
+        <div>
+          {hamburgerIsOpen &&
+            createPortal(
+              <PortalContainer>
+                <HamburgerMenuContainer>
+                  <div>
+                    <span>
+                      <a href="/"> Ag/Portfolio </a>
+                    </span>
+                    <nav>
+                      <NavLink
+                        to={'https://github.com/albanogabriel'}
+                        target="_blank"
+                      >
+                        <StyledGitHubIcon />
+                      </NavLink>
+                      <NavLink
+                        to={'https://linkedin.com/in/albanogabriel'}
+                        target="_blank"
+                      >
+                        <StyledLinkedin />
+                      </NavLink>
+                      <NavLink
+                        to={'https://instagram.com/albanogabriel'}
+                        target="_blank"
+                      >
+                        <StyledInstagramLogo />
+                      </NavLink>
+                    </nav>
+                    <StyledCross1Icon onClick={handleCloseMenuHamburger} />
+                  </div>
+                  <ul>
+                    <span>Menu</span>
+                    <li>
+                      <NavLink
+                        onClick={handleCloseMenuHamburger}
+                        to={'/about'}
+                        title="About"
+                      >
+                        About
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        onClick={handleCloseMenuHamburger}
+                        to={'/cases'}
+                        title="Cases"
+                      >
+                        Cases
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        onClick={handleCloseMenuHamburger}
+                        to={'/experiences'}
+                        title="Experiences"
+                      >
+                        Experiences
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        onClick={handleCloseMenuHamburger}
+                        to={'/education'}
+                        title="Education"
+                      >
+                        Education
+                      </NavLink>
+                    </li>
+                  </ul>
+                </HamburgerMenuContainer>
+              </PortalContainer>,
+              document.body,
+            )}
+
           <HeaderMobileContainer isScrolling={isScrollingPage}>
             <div>
               <a href="/">
@@ -118,37 +147,42 @@ export function Header() {
               </HamburgerMenuIconWithHover>
             </div>
           </HeaderMobileContainer>
-        )
+        </div>
       ) : (
+        // desktop
         <HeaderDesktopContainer isScrolling={isScrollingPage}>
           <div>
-            <div>
-              <a href="/">
-                albanogabriel/<span>portfolio</span>
-              </a>
-            </div>
+            <a href="/">
+              albanogabriel/<span>portfolio</span>
+            </a>
             <ul>
-              <li>
-                <NavLink to={'/about'} title="about">
-                  About
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to={'/cases'} title="cases">
-                  Cases
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to={'/experiences'} title="experiences">
-                  Experiences
-                </NavLink>
-              </li>
-              <li>
-                <NavLink to={'/education'} title="education">
-                  Education
-                </NavLink>
-              </li>
+              {navBarDesktop.map((navItem) => {
+                return (
+                  <li key={navItem.route}>
+                    <NavLink to={navItem.route} title={navItem.title}>
+                      {navItem.title}
+                    </NavLink>
+                  </li>
+                )
+              })}
             </ul>
+            <nav>
+              <NavLink to={'https://github.com/albanogabriel'} target="_blank">
+                <StyledGitHubIcon style={{ transform: 'scale(1.125)' }} />
+              </NavLink>
+              <NavLink
+                to={'https://linkedin.com/in/albanogabriel'}
+                target="_blank"
+              >
+                <StyledLinkedin style={{ transform: 'scale(1.125)' }} />
+              </NavLink>
+              <NavLink
+                to={'https://instagram.com/albanogabriel'}
+                target="_blank"
+              >
+                <StyledInstagramLogo style={{ transform: 'scale(1.125)' }} />
+              </NavLink>
+            </nav>
           </div>
         </HeaderDesktopContainer>
       )}

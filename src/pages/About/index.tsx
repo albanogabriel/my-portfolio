@@ -1,4 +1,4 @@
-import { PageContainer } from './styles'
+import { PageContainer } from '../../styles/global'
 
 export function About() {
   return (
