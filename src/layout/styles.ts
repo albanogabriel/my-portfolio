@@ -29,4 +29,5 @@ export const RadialBackground = styled.div`
 export const Content = styled.div`
   z-index: 2;
   position: relative;
+  padding-top: 48px;
 `

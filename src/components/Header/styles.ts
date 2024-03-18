@@ -1,12 +1,28 @@
 import { Cross1Icon } from '@radix-ui/react-icons'
 import styled, { keyframes } from 'styled-components'
 
+interface HeaderProps {
+  isScrolling: boolean
+}
+
 // mobile
-export const HeaderMobileContainer = styled.header`
+export const HeaderMobileContainer = styled.header<HeaderProps>`
+  position: fixed; /* Change this line */
+  top: 0;
+  left: 0;
+  right: 0;
+
+  transition: background-color 0.3s ease;
+
+  background: ${(props) =>
+    props.isScrolling
+      ? 'radial-gradient(circle at 30% 70%, #2D2022, transparent 90%), rgba(36, 41, 46, 0.875)'
+      : 'transparent'};
+
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px;
+  padding: 12px 16px;
   box-shadow:
     // eixo x / eixo y / blur / Spread
     0 0px 3px 0 rgba(255, 255, 255, 0.4),
@@ -59,15 +75,28 @@ export const HamburgerMenuIconWithHover = styled.div`
   &:hover {
     background-color: ${({ theme }) => theme.color['gray-700']};
   }
+
+  &:active {
+    background-color: ${({ theme }) => theme.color['gray-500']};
+  }
 `
 
-// mobile menu open
-export const MenuHamburgerContainer = styled.div`
+// mobile - MenuOpen
+
+export const PortalContainer = styled.div`
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+`
+
+export const HamburgerMenuContainer = styled.div`
+  z-index: 1000;
+  position: fixed;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  position: absolute;
-  width: 100%;
+  width: 100vw;
   height: 100vh;
   background-color: ${({ theme }) => theme.color['gray-900']};
   opacity: 0.982;
@@ -130,7 +159,8 @@ export const StyledCross1Icon = styled(Cross1Icon)`
   margin-right: 8px;
 
   &:hover {
-    animation: ${rotate360} 0.3s linear;
+    color: ${({ theme }) => theme.color['gray-100']};
+    animation: ${rotate360} 0.225s linear;
   }
 `
 

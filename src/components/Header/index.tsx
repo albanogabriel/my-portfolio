@@ -1,18 +1,35 @@
 import { HamburgerMenuIcon } from '@radix-ui/react-icons'
 import { useEffect, useState } from 'react'
+import { createPortal } from 'react-dom'
 import { NavLink } from 'react-router-dom'
 
 import {
+  HamburgerMenuContainer,
   HamburgerMenuIconWithHover,
   HeaderDesktopContainer,
   HeaderMobileContainer,
-  MenuHamburgerContainer,
+  PortalContainer,
   StyledCross1Icon,
 } from './styles'
 
 export function Header() {
   const [hamburgerIsOpen, setHamburgerIsOpen] = useState(false)
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 890)
+  const [isScrollingPage, setIsScrollingPage] = useState(false)
+
+  useEffect(() => {
+    function handleScroll() {
+      const scrollPosition = window.scrollY
+      const scrollPositionTrigger = 35
+      setIsScrollingPage(scrollPosition > scrollPositionTrigger)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+    }
+  }, [])
 
   useEffect(() => {
     function handleResize() {
@@ -39,66 +56,57 @@ export function Header() {
     <div>
       {isSmallScreen ? (
         hamburgerIsOpen ? (
-          <>
-            <HeaderMobileContainer>
-              <div>
+          createPortal(
+            <PortalContainer>
+              <HamburgerMenuContainer>
                 <span>
-                  <a href="/">
-                    Ag/<span>portfolio</span>
-                  </a>
+                  Menu
+                  <StyledCross1Icon onClick={handleCloseMenuHamburger} />
                 </span>
-              </div>
-              <HamburgerMenuIconWithHover onClick={handleOpenMenuHamburger}>
-                <HamburgerMenuIcon />
-              </HamburgerMenuIconWithHover>
-            </HeaderMobileContainer>
-            <MenuHamburgerContainer>
-              <span>
-                Menu
-                <StyledCross1Icon onClick={handleCloseMenuHamburger} />
-              </span>
-              <ul>
-                <li>
-                  <NavLink
-                    onClick={handleCloseMenuHamburger}
-                    to={'/about'}
-                    title="About"
-                  >
-                    About
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    onClick={handleCloseMenuHamburger}
-                    to={'/cases'}
-                    title="Cases"
-                  >
-                    Cases
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    onClick={handleCloseMenuHamburger}
-                    to={'/experiences'}
-                    title="Experiences"
-                  >
-                    Experiences
-                  </NavLink>
-                </li>
-                <li>
-                  <NavLink
-                    onClick={handleCloseMenuHamburger}
-                    to={'/education'}
-                    title="Education"
-                  >
-                    Education
-                  </NavLink>
-                </li>
-              </ul>
-            </MenuHamburgerContainer>
-          </>
+                <ul>
+                  <li>
+                    <NavLink
+                      onClick={handleCloseMenuHamburger}
+                      to={'/about'}
+                      title="About"
+                    >
+                      About
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      onClick={handleCloseMenuHamburger}
+                      to={'/cases'}
+                      title="Cases"
+                    >
+                      Cases
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      onClick={handleCloseMenuHamburger}
+                      to={'/experiences'}
+                      title="Experiences"
+                    >
+                      Experiences
+                    </NavLink>
+                  </li>
+                  <li>
+                    <NavLink
+                      onClick={handleCloseMenuHamburger}
+                      to={'/education'}
+                      title="Education"
+                    >
+                      Education
+                    </NavLink>
+                  </li>
+                </ul>
+              </HamburgerMenuContainer>
+            </PortalContainer>,
+            document.body,
+          )
         ) : (
-          <HeaderMobileContainer>
+          <HeaderMobileContainer isScrolling={isScrollingPage}>
             <div>
               <a href="/">
                 albanogabriel/<span>portfolio</span>
@@ -112,7 +120,7 @@ export function Header() {
           </HeaderMobileContainer>
         )
       ) : (
-        <HeaderDesktopContainer>
+        <HeaderDesktopContainer isScrolling={isScrollingPage}>
           <div>
             <div>
               <a href="/">
