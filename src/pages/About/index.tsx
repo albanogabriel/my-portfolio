@@ -1,3 +1,5 @@
+import { NavLink } from 'react-router-dom'
+
 import { BigTitle, PageContainer, SmallParagraph } from '../../styles/global'
 import { TextContainer } from './styles'
 
@@ -10,22 +12,24 @@ export function About() {
           <SmallParagraph>
             <p>
               Sou graduado em Publicidade e Propaganda através da faculdade
-              UNISUL em 2022.
+              UNISUL em 2022. Após algumas experiências profissionais no
+              Marketing e UX / UI Design, decidi mudar a rota de minha vida
+              profissional
             </p>
             <br />
             <p>
-              Após algumas experiências profissionais no Marketing e UX / UI
-              Design, decidi mudar a rota de minha vida profissional me
-              inscrevendo em uma faculdade focada em tecnologia para ingressar
-              na área do Desenvolvimento Front-end.
+              Para o início dessa nova jornada focada em tecnologia escolhi
+              fazer a faculdade de Análise e Desenvolvimento de Sistemas com o
+              objetivo de ingressar no mercado de trabalho da área do
+              Desenvolvimento Front-end e que me entregassem uma boa teoria
+              sobre tecnologia e programação.
             </p>
             <br />
             <p>
-              A escolha de minha faculdade foi centrada no custo-benefício,
+              A escolha de minha faculdade foi centrada no custo-benefício:
               busquei a faculdade com melhor educação, didática e mensalidade
-              acessíveis segundo reviews e feedback de clientes que me
-              entregassem uma boa teoria sobre tecnologia e programação. Escolhi
-              a UNICESUMAR com foco no objetivo de dar o primeiro passo nessa
+              acessível segundo reviews e feedback dos estudantes. Escolhi a
+              UNICESUMAR com foco no objetivo de dar o primeiro passo nessa
               minha nova carreira
             </p>
             <br />
@@ -40,11 +44,13 @@ export function About() {
             <p>
               Para me especilizar fiz os cursos: Rocketseat Ignite(React JS,
               Figma para Devs) / EBAC Full Stack Design(UX / UI Design e Front
-              end Development) / Metodologias Ágeis e SCRUM. Também desenvolo
-              por conta própria projetos para me testar e consolidar meus
-              aprendizados.
+              end Development) / Metodologias Ágeis e SCRUM.
             </p>
             <br />
+            <p>
+              Também desenvolvo projetos pessoais por conta própria para me
+              desafiar e consolidar meus aprendizados.
+            </p>
             <p>
               E em futuro próximo almejo fazer os cursos de: React Native,
               (Tailwind, Framer Motion, SEO, Node, Java, Sprintboot)
@@ -59,8 +65,11 @@ export function About() {
             </p>
           </SmallParagraph>
         </div>
-        <span>
+        {/* <span>
           <a href="/">Voltar...</a>
+        </span> */}
+        <span>
+          <NavLink to="/">Voltar...</NavLink>
         </span>
       </TextContainer>
     </PageContainer>
