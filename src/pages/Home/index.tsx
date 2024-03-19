@@ -1,7 +1,8 @@
-import { ArrowRight } from 'phosphor-react'
+import { ArrowArcLeft, ArrowRight } from 'phosphor-react'
 
+import { LinkButtonPrimary } from '../../components/LinkButtonPrimary'
 import { BigTitle, PageContainer, SmallParagraph } from '../../styles/global'
-import { ButtonPrimary, HomeContainer } from './styles'
+import { HomeContainer } from './styles'
 
 export function Home() {
   return (
@@ -18,12 +19,26 @@ export function Home() {
           </SmallParagraph>
         </div>
 
-        <ButtonPrimary to="/">
-          <a href="/">
-            Entre em contato
-            <ArrowRight />
-          </a>
-        </ButtonPrimary>
+        <LinkButtonPrimary
+          to={'https://bit.ly/3QKhXU0'}
+          target="_blank"
+          width="350px"
+        >
+          Entre em contato
+          <ArrowRight />
+        </LinkButtonPrimary>
+
+        <LinkButtonPrimary
+          to={
+            'https://docs.google.com/document/d/1EoO4NyKV-_W4P3hVuKSCVHJFE_bVZlRCiJ7BzlVxKNc/edit#heading=h.58egdng8y2vt'
+          }
+          target="_blank"
+          width="350px"
+          variant="secundary"
+        >
+          Curriculum Vitae
+          <ArrowArcLeft />
+        </LinkButtonPrimary>
       </HomeContainer>
     </PageContainer>
   )
