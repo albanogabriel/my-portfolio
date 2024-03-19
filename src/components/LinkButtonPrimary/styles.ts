@@ -20,7 +20,7 @@ export const StyledLinkButton = styled(Link)<StyledLinkButtonProps>`
   font-weight: bold;
   color: ${(props) => props.theme.color['gray-800']};
   background-color: ${(props) => props.theme.color['gray-050']};
-  font-family: ${(props) => props.theme.fontFamilies.default};
+  font-family: ${(props) => props.theme.fontFamilies.default}, sans-serif;
   font-weight: 600;
 
   svg {
