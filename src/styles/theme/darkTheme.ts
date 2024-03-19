@@ -18,6 +18,7 @@ export const darkTheme = {
   color: {
     white: '#FFF',
     'gray-050': '#EEEEEE',
+    'gray-075': '#D8D8D8',
     'gray-100': '#B4B4B4',
     'gray-150': '##7B7B7B',
     'gray-200': '#6E6E6E',

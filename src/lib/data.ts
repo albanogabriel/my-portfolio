@@ -1,5 +1,9 @@
 export const navBarDesktop = [
   {
+    route: '/',
+    title: 'Home',
+  },
+  {
     route: '/about',
     title: 'About',
   },

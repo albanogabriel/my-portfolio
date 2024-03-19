@@ -70,4 +70,9 @@ export const SmallParagraph = styled.p`
   font-size: ${({ theme }) => theme.textSizes.lg};
   font-weight: 300;
   line-height: ${({ theme }) => theme.lineHeight.base};
+
+  strong {
+    font-weight: 700;
+    color: ${({ theme }) => theme.color['gray-075']};
+  }
 `

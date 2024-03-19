@@ -96,6 +96,15 @@ export function Header() {
                     <li>
                       <NavLink
                         onClick={handleCloseMenuHamburger}
+                        to={'/'}
+                        title="Home"
+                      >
+                        Home
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink
+                        onClick={handleCloseMenuHamburger}
                         to={'/about'}
                         title="About"
                       >
