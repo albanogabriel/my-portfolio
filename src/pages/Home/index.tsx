@@ -13,9 +13,9 @@ export function Home() {
             <BigTitle>Olá,</BigTitle>
 
             <SmallParagraph>
-              Me chamo <strong>Gabriel Albano</strong>. Desempenho o papel de{' '}
+              Me chamo <strong>Gabriel Albano.</strong> Desempenho o papel de{' '}
               <strong>Scrum Master</strong> em uma equipe de{' '}
-              <strong>Desenvolvimento Front-end</strong>.Tenho formação em
+              <strong>Desenvolvimento Front-end.</strong> Tenho formação em
               Publicidade Propaganda e atualmente iniciei a faculdade de ADS
               (Análise e Desenv. de Sistemas). Meu foco é <strong>React</strong>{' '}
               (Next.js)

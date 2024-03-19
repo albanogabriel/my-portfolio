@@ -5,6 +5,10 @@ export const TextContainer = styled.div`
   flex-direction: column;
   gap: 2rem;
 
+  p {
+    font-size: 1rem;
+  }
+
   span {
     a {
       line-height: normal;

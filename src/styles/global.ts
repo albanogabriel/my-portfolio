@@ -51,10 +51,14 @@ export const PageContainer = styled.div`
   width: 100%;
   padding: 32px 24px;
 
-  @media (min-width: 767px) {
-    // desktop
-    max-width: 1400px;
-    margin: 0 auto;
+  @media (min-width: 768px) {
+    padding: 48px; /* Increase padding for tablets */
+  }
+
+  /* Media query for desktops (1024px) */
+  @media (min-width: 1024px) {
+    width: 800px;
+    margin: 0 auto; /* Center the container */
   }
 `
 export const BigTitle = styled.h1`
