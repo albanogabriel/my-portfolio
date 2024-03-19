@@ -1,9 +1,9 @@
 import { ArrowArcLeft, ArrowRight } from 'phosphor-react'
+import { NavLink } from 'react-router-dom'
 
 import { LinkButtonPrimary } from '../../components/LinkButtonPrimary'
 import { BigTitle, PageContainer, SmallParagraph } from '../../styles/global'
 import { ButtonContainer, HomeContainer, TextContainer } from './styles'
-
 export function Home() {
   return (
     <PageContainer>
@@ -22,7 +22,7 @@ export function Home() {
             </SmallParagraph>
           </div>
           <span>
-            <a href="/about">Ler mais...</a>
+            <NavLink to="/about">Ler mais...</NavLink>
           </span>
         </TextContainer>
 
