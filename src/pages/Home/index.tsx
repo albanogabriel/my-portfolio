@@ -22,10 +22,11 @@ export function Home() {
             </SmallParagraph>
           </div>
           <span>
-            <NavLink to="/about">Ler mais...</NavLink>
+            <NavLink to="/about" title="About">
+              Continuar lendo...
+            </NavLink>
           </span>
         </TextContainer>
-
         <ButtonContainer>
           <LinkButtonPrimary
             to={'https://bit.ly/3QKhXU0'}

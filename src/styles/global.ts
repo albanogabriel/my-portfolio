@@ -1,6 +1,11 @@
 import styled, { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
+
+  html {
+    scroll-behavior: smooth;
+  }
+  
   *{
     padding: 0;
     margin: 0;
@@ -51,16 +56,18 @@ export const PageContainer = styled.div`
   width: 100%;
   padding: 32px 24px;
 
+  /* Media query for tablets (767px) */
   @media (min-width: 768px) {
-    padding: 48px; /* Increase padding for tablets */
+    padding: 48px;
   }
 
   /* Media query for desktops (1024px) */
   @media (min-width: 1024px) {
     width: 800px;
-    margin: 0 auto; /* Center the container */
+    margin: 0 auto;
   }
 `
+
 export const BigTitle = styled.h1`
   color: ${({ theme }) => theme.color['gray-050']};
   font-family: ${({ theme }) => theme.fontFamilies.BigTitle};

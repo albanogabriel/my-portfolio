@@ -1,5 +1,14 @@
 import styled from 'styled-components'
 
+export const AboutPageContainer = styled.div``
+
+export const HomeContainer = styled.div`
+  display: flex;
+  height: 2000px;
+  flex-direction: column;
+  gap: 2rem;
+`
+
 export const TextContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -15,15 +24,10 @@ export const TextContainer = styled.div`
 
       &:hover {
         border-bottom: 1px solid ${(props) => props.theme.color['gray-200']};
+        color: ${(props) => props.theme.color['gray-075']};
       }
     }
   }
-`
-
-export const HomeContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  gap: 2rem;
 `
 
 export const ButtonContainer = styled.div`

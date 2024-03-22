@@ -12,6 +12,7 @@ interface HeaderProps {
 
 // mobile
 export const HeaderMobileContainer = styled.header<HeaderProps>`
+  z-index: 1000;
   position: fixed; /* Change this line */
   top: 0;
   left: 0;
