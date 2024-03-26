@@ -8,8 +8,35 @@ export const AboutPageContainer = styled.div`
   width: 100%;
   padding: 32px 24px;
 
-  .stickyMenu {
-    display: none;
+  nav {
+    display: flex;
+    justify-content: center;
+
+    span {
+      cursor: pointer;
+      padding-inline: 12px;
+      padding-bottom: 4px;
+      font-size: 0.875rem;
+      border-bottom: 2px solid transparent;
+
+      &:hover {
+        border-bottom: 2px solid ${(props) => props.theme.color['gray-200']};
+      }
+
+      &.checked {
+        border-bottom: 2px solid ${(props) => props.theme.color['gray-075']};
+      }
+    }
+  }
+
+  section {
+    .section-area {
+      padding: 12px;
+    }
+
+    .stickyMenu {
+      display: none;
+    }
   }
 
   span {
@@ -31,7 +58,14 @@ export const AboutPageContainer = styled.div`
   @media (min-width: 768px) {
     padding: 48px;
 
+    nav {
+      display: none;
+    }
+
     section {
+      .section-area {
+      }
+
       .stickyMenu {
         display: none;
       }
@@ -44,10 +78,17 @@ export const AboutPageContainer = styled.div`
     margin: 0 auto;
     padding-bottom: 200px;
 
+    nav {
+      display: none;
+    }
+
     section {
       display: grid;
       gap: 4rem;
       grid-template-columns: 70% 30%;
+
+      .section-area {
+      }
 
       .stickyMenu {
         padding-top: 50px;
@@ -109,7 +150,7 @@ export const AboutPageContainer = styled.div`
   }
 `
 
-export const AboutMe = styled.div`
+export const Section = styled.div`
   position: relative;
   display: flex;
   flex-direction: column;
@@ -125,17 +166,38 @@ export const AboutMe = styled.div`
 
   /* Media query for desktops (1024px) */
   @media (min-width: 1024px) {
-    ::before {
+    &::after {
+      z-index: 1100;
+      content: '‘‘';
       position: absolute;
       top: 90px;
-      left: -80px;
-      content: '‘‘';
+      left: -90px;
       line-height: 1;
       letter-spacing: -0.045em;
-      color: ${(props) => props.theme.color['gray-200']};
-      /* background-color: red; */
+      color: ${(props) => props.theme.color['gray-500']};
       font-size: 130px;
       font-family: 'Times New Roman', Times, serif;
     }
+
+    section {
+      .section-area {
+        /* position: relative; */
+      }
+    }
+  }
+`
+
+export const LinkAboutMe = styled.p`
+  cursor: pointer;
+  font-size: 1rem;
+  gap: 0.2rem;
+  line-height: normal;
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  color: ${(props) => props.theme.color['gray-100']};
+  border-bottom: 1px solid transparent;
+
+  &:hover {
+    opacity: 0.5;
   }
 `

@@ -86,4 +86,8 @@ export const SmallParagraph = styled.p`
     font-weight: 700;
     color: ${({ theme }) => theme.color['gray-075']};
   }
+
+  ol {
+    margin-left: 16px;
+  }
 `

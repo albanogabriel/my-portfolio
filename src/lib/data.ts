@@ -1,3 +1,9 @@
+import LivrosCoverImg from '../assets/coverImgs/condeDeMonteCristo.jpg'
+import FilmesCoverImg from '../assets/coverImgs/Duna-2-01.jpg'
+import SerieCoverImg from '../assets/coverImgs/got.jpg'
+import AnimesCoverImg from '../assets/coverImgs/steinsGate2.jpeg'
+import GamesCoverImg from '../assets/coverImgs/witcher3.jpg'
+
 export const navBarDesktop = [
   {
     route: '/',
@@ -21,57 +27,41 @@ export const navBarDesktop = [
   },
 ] as const
 
-export const Interests = [
+export const Lists = [
   {
     id: 1,
-    interest: 'Livros',
-    link: 'https://www.notion.so/Livros-e4eef22b53494142802620d82be19b74?pvs=4',
+    title: 'Livros',
+    link: '/about/livros',
+    list: [
+      'Duna parte 2',
+      'O Curioso caso de Benjamin Button - David Fincher',
+      'A Chegada - Dennis Villeneuve',
+    ],
+    coverImg: LivrosCoverImg,
   },
   {
     id: 2,
-    interest: 'Filmes',
-    link: 'https://www.notion.so/Movies-e5d2d72071404fa8a3c810937a13353c?pvs=4',
+    title: 'Filmes',
+    link: '/about/filmes',
+    coverImg: FilmesCoverImg,
   },
   {
     id: 3,
-    interest: 'Series',
-    link: 'https://www.notion.so/Series-dfe7dc72d7aa49ab9df728cd0b56dc74?pvs=4',
+    title: 'Series',
+    link: '/about/series',
+    coverImg: SerieCoverImg,
   },
   {
     id: 4,
-    interest: 'Animes',
+    title: 'Animes',
     link: 'https://www.notion.so/Animes-3485947806eb4146ba8f46e3d33a8a00?pvs=4',
+    coverImg: AnimesCoverImg,
   },
   {
     id: 6,
-    interest: 'Games',
+    title: 'Games',
     link: 'https://www.notion.so/Jogos-29ef5a3104dc4d8598765048cad9f01f?pvs=4',
-  },
-  {
-    id: 5,
-    interest: 'Champions League',
-    link: 'https://www.google.com/search?q=champions+league&oq=champions+league&gs_lcrp=EgZjaHJvbWUqBwgAEAAYjwIyBwgAEAAYjwIyCggBEC4YsQMYgAQyDAgCEAAYQxiABBiKBTIKCAMQABixAxiABDIMCAQQABhDGIAEGIoFMgwIBRAAGEMYgAQYigUyCggGEAAYsQMYgAQyDAgHEAAYQxiABBiKBTINCAgQLhiDARixAxiABDIHCAkQABiPAtIBCDIzMzlqMGo3qAIAsAIA&sourceid=chrome&ie=UTF-8',
-  },
-  {
-    id: 4,
-    interest: 'Tênis',
-    link: '/',
-  },
-
-  {
-    id: 6,
-    interest: 'Arsenal',
-    link: '#',
-  },
-  {
-    id: 7,
-    interest: 'Avaí F.C',
-    link: '#',
-  },
-  {
-    id: 8,
-    interest: 'Botafogo',
-    link: '#',
+    coverImg: GamesCoverImg,
   },
 ] as const
 

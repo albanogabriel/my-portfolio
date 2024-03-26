@@ -11,7 +11,6 @@ export function Home() {
         <TextContainer>
           <div>
             <BigTitle>Olá,</BigTitle>
-
             <SmallParagraph>
               Me chamo <strong>Gabriel Albano.</strong> Desempenho o papel de{' '}
               <strong>Scrum Master</strong> em uma equipe de{' '}

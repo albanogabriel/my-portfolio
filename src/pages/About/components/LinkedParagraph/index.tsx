@@ -1,24 +1,31 @@
 import { ArrowSquareRight, ArrowSquareUpRight } from 'phosphor-react'
 import { useState } from 'react'
 
-import { InterestsNavLink, ParagraphLink } from './styles'
+import { HoverScreenContainer, InterestsNavLink, ParagraphLink } from './styles'
 
 interface Data {
   id: number
   link: string
-  interest: string
+  title: string
+  coverImg: string
 }
 
 interface LinkedParagraphProps {
   data: Data
+  onClick: (param: string) => void
 }
 
-export function LinkedParagraph({ data }: LinkedParagraphProps) {
+export function LinkedParagraph({ data, onClick }: LinkedParagraphProps) {
   const [onHover, setOnHover] = useState(false)
+
+  function handleGoToTheLink() {
+    onClick(data.title)
+  }
 
   return (
     <ParagraphLink
       key={data.id}
+      onClick={handleGoToTheLink}
       onMouseOver={() => {
         setOnHover(true)
       }}
@@ -26,16 +33,30 @@ export function LinkedParagraph({ data }: LinkedParagraphProps) {
         setOnHover(false)
       }}
     >
-      <InterestsNavLink to={data.link} target="_blank">
-        <p>{data.interest} </p>
-        <div>
-          {onHover ? (
-            <ArrowSquareUpRight size={15} />
-          ) : (
-            <ArrowSquareRight size={15} />
+      <div>
+        <InterestsNavLink>
+          <p>{data.title} </p>
+          <div>
+            {onHover ? (
+              <div>
+                <ArrowSquareUpRight size={15} />
+              </div>
+            ) : (
+              <ArrowSquareRight size={15} />
+            )}
+          </div>
+          {onHover && (
+            <HoverScreenContainer>
+              <span>
+                <img src={data.coverImg} alt="" />
+              </span>
+              <div>
+                <h1>{data.title}</h1>
+              </div>
+            </HoverScreenContainer>
           )}
-        </div>
-      </InterestsNavLink>
+        </InterestsNavLink>
+      </div>
     </ParagraphLink>
   )
 }
