@@ -59,7 +59,6 @@ export const AboutPageContainer = styled.div`
     padding: 48px;
 
     nav {
-      display: none;
     }
 
     section {
@@ -192,7 +191,6 @@ export const LinkAboutMe = styled.p`
   text-decoration: none;
   border-bottom: 1px solid transparent;
   color: ${(props) => props.theme.color['gray-100']};
-  border-bottom: 1px solid transparent;
 
   &:hover {
     opacity: 0.5;

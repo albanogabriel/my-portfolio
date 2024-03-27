@@ -13,7 +13,7 @@ import { AboutPageContainer, LinkAboutMe } from './styles'
 
 export function About() {
   const [section, setSection] = useState('Aboutme')
-  const [navIsChecked, setNavIsChecked] = useState('')
+  const [navIsChecked, setNavIsChecked] = useState('Aboutme')
 
   const [checkedItem, setCheckedItem] = useState('')
 
