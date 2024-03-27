@@ -29,6 +29,7 @@ export const darkTheme = {
     'gray-700': '#222222',
     'gray-800': '#191919',
     'gray-900': '#111111',
+    'blue-link': '#777DFA',
   },
   textSizes: {
     '4xl': '4rem', // 64px

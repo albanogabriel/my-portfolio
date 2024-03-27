@@ -12,8 +12,10 @@ import { Series } from './components/Pages/Series'
 import { AboutPageContainer, LinkAboutMe } from './styles'
 
 export function About() {
-  const [section, setSection] = useState('')
+  const [section, setSection] = useState('Aboutme')
   const [navIsChecked, setNavIsChecked] = useState('')
+
+  const [checkedItem, setCheckedItem] = useState('')
 
   function onSectionChildChange(param: string) {
     setSection(param)
@@ -24,18 +26,19 @@ export function About() {
       <nav>
         <span
           onClick={() => {
-            setSection('')
-            setNavIsChecked('')
+            setSection('Aboutme')
+            setNavIsChecked('Aboutme')
           }}
-          className={navIsChecked === '' ? 'checked' : ''}
+          className={navIsChecked === 'Aboutme' ? 'checked' : ''}
         >
-          Sobre Mim
+          About
         </span>
         <span
           onClick={() => {
             setSection('Livros')
             setNavIsChecked('Livros')
           }}
+          className={navIsChecked === 'Livros' ? 'checked' : ''}
         >
           Livros
         </span>
@@ -44,6 +47,7 @@ export function About() {
             setSection('Filmes')
             setNavIsChecked('Filmes')
           }}
+          className={navIsChecked === 'Filmes' ? 'checked' : ''}
         >
           Filmes
         </span>
@@ -52,14 +56,16 @@ export function About() {
             setSection('Series')
             setNavIsChecked('Series')
           }}
+          className={navIsChecked === 'Series' ? 'checked' : ''}
         >
           Séries
         </span>
         <span
           onClick={() => {
-            setSection('Filmes')
-            setNavIsChecked('Filmes')
+            setSection('Animes')
+            setNavIsChecked('Animes')
           }}
+          className={navIsChecked === 'Animes' ? 'checked' : ''}
         >
           Animes
         </span>
@@ -68,6 +74,7 @@ export function About() {
             setSection('Games')
             setNavIsChecked('Games')
           }}
+          className={navIsChecked === 'Games' ? 'checked' : ''}
         >
           Games
         </span>
@@ -75,7 +82,7 @@ export function About() {
 
       <section>
         <div className="section-area">
-          {section === '' && <AboutMe />}
+          {section === 'Aboutme' && <AboutMe />}
           {section === 'Livros' && <Livros />}
           {section === 'Filmes' && <Filmes />}
           {section === 'Series' && <Series />}
@@ -90,7 +97,15 @@ export function About() {
           </div>
           <div className="age-wrapper">
             <h3>Sobre mim</h3>
-            <LinkAboutMe onClick={() => setSection('')}>
+            <LinkAboutMe
+              onClick={() => {
+                setSection('Aboutme')
+                setCheckedItem('')
+              }}
+              className={
+                section === 'Aboutme' || checkedItem === '' ? 'checked' : ''
+              }
+            >
               Resumo(Sobre mim)
             </LinkAboutMe>
           </div>
@@ -104,6 +119,8 @@ export function About() {
                     key={link.id}
                     data={link}
                     onClick={onSectionChildChange}
+                    checked={checkedItem === link.title} // Pass whether it's checked
+                    setCheckedItem={setCheckedItem} // Pass setter function
                   />
                 )
               })}

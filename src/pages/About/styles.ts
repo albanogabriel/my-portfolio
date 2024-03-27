@@ -14,10 +14,10 @@ export const AboutPageContainer = styled.div`
 
     span {
       cursor: pointer;
-      padding-inline: 12px;
+      padding-inline: 8px;
       padding-bottom: 4px;
       font-size: 0.875rem;
-      border-bottom: 2px solid transparent;
+      border-bottom: 1px solid ${(props) => props.theme.color['gray-200']};
 
       &:hover {
         border-bottom: 2px solid ${(props) => props.theme.color['gray-200']};
@@ -119,13 +119,6 @@ export const AboutPageContainer = styled.div`
           display: flex;
           flex-direction: column;
           gap: 0.35rem;
-
-          p {
-            font-size: 14px;
-            width: max-content;
-            color: ${(props) => props.theme.color['gray-075']};
-            line-height: ${(props) => props.theme.lineHeight.base};
-          }
         }
 
         .interest-wrapper {
@@ -188,6 +181,10 @@ export const Section = styled.div`
 `
 
 export const LinkAboutMe = styled.p`
+  font-size: 14px !important;
+  width: max-content;
+  color: ${(props) => props.theme.color['gray-075']};
+  line-height: ${(props) => props.theme.lineHeight.base};
   cursor: pointer;
   font-size: 1rem;
   gap: 0.2rem;
@@ -199,5 +196,14 @@ export const LinkAboutMe = styled.p`
 
   &:hover {
     opacity: 0.5;
+  }
+
+  &.checked {
+    color: ${(props) => props.theme.color['blue-link']};
+    border-bottom: 1px solid ${(props) => props.theme.color['blue-link']};
+
+    &:hover {
+      opacity: 1;
+    }
   }
 `

@@ -17,16 +17,6 @@ export const InterestsNavLink = styled.div`
   text-decoration: none;
   border-bottom: 1px solid transparent;
 
-  &:hover {
-    p {
-      opacity: 0.5;
-    }
-
-    svg {
-      opacity: 0.5;
-    }
-  }
-
   p {
     color: ${(props) => props.theme.color['gray-100']};
     border-bottom: 1px solid transparent;
@@ -39,20 +29,31 @@ export const InterestsNavLink = styled.div`
     border-bottom: 1px solid transparent;
   }
 
-  /* :nth-child(1) {
-    color: ${(props) => props.theme.color['gray-100']};
-    border-bottom: 1px solid transparent;
+  &:hover {
+    p {
+      opacity: 0.5;
+    }
+
+    svg {
+      opacity: 0.5;
+    }
   }
 
-  :last-child {
-    display: flex;
-    align-items: center;
-    color: ${(props) => props.theme.color['gray-200']};
-    border-bottom: 1px solid transparent;
-  } */
+  &.checked {
+    color: ${(props) => props.theme.color['blue-link']};
+    border-bottom: 1px solid ${(props) => props.theme.color['blue-link']};
 
-  &:hover {
-    /* opacity: 0.5; */
+    p {
+      color: ${(props) => props.theme.color['blue-link']};
+    }
+
+    svg {
+      color: ${(props) => props.theme.color['blue-link']};
+    }
+
+    &:hover {
+      opacity: 1;
+    }
   }
 `
 

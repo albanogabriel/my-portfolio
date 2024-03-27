@@ -13,13 +13,21 @@ interface Data {
 interface LinkedParagraphProps {
   data: Data
   onClick: (param: string) => void
+  checked: boolean // Prop to indicate whether it's checked
+  setCheckedItem: (title: string) => void // Setter function for checked item
 }
 
-export function LinkedParagraph({ data, onClick }: LinkedParagraphProps) {
+export function LinkedParagraph({
+  data,
+  onClick,
+  checked,
+  setCheckedItem,
+}: LinkedParagraphProps) {
   const [onHover, setOnHover] = useState(false)
 
   function handleGoToTheLink() {
     onClick(data.title)
+    setCheckedItem(data.title)
   }
 
   return (
@@ -34,7 +42,7 @@ export function LinkedParagraph({ data, onClick }: LinkedParagraphProps) {
       }}
     >
       <div>
-        <InterestsNavLink>
+        <InterestsNavLink className={checked ? 'checked' : ''}>
           <p>{data.title} </p>
           <div>
             {onHover ? (
