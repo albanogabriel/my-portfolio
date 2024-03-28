@@ -24,6 +24,10 @@ export const TestePageContainer = styled.div`
     margin-bottom: 500px;
     height: 2000px;
   }
+  #section4 {
+    margin-top: 500px;
+    margin-bottom: 200px;
+  }
 
   a.active {
     color: red; // Change to your desired color

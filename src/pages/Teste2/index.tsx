@@ -60,6 +60,15 @@ export function Teste2() {
               Section 3
             </a>
           </li>
+          <li>
+            <a
+              href="#section4"
+              className={activeSection === 'section4' ? 'active' : ''}
+              onClick={() => setActiveSection('section4')}
+            >
+              Section 4
+            </a>
+          </li>
         </ul>
       </nav>
 
@@ -75,6 +84,10 @@ export function Teste2() {
         </section>
 
         <section id="section3">
+          <h2>Section 3</h2>
+          <p>This is the content of section 3.</p>
+        </section>
+        <section id="section4">
           <h2>Section 3</h2>
           <p>This is the content of section 3.</p>
         </section>
