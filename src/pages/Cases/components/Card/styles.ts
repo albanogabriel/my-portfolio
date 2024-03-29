@@ -13,14 +13,13 @@ export const CardLinkContainer = styled(Link)`
     padding: 32px;
     display: flex;
     border-radius: 8px;
-    background: linear-gradient(120deg, ${indigo4}, ${plum3});
-    background-size: 200% 300%;
-    animation: gradientAnimation 11s ease infinite;
     height: 300px;
-
     position: relative;
     overflow: hidden; /* Hides any content that exceeds the boundaries of the card */
 
+    background: linear-gradient(120deg, ${indigo4}, ${plum3});
+    background-size: 200% 300%;
+    animation: gradientAnimation 11s ease infinite;
     @keyframes gradientAnimation {
       0% {
         background-position: 0% 50%;
@@ -45,11 +44,10 @@ export const CardLinkContainer = styled(Link)`
     }
 
     main {
-      /* margin-right: 300px; */
       display: flex;
       flex-direction: column;
       gap: 24px;
-      padding-right: 30px;
+      padding-right: 10%;
 
       .title-wrap {
         display: flex;
@@ -69,7 +67,7 @@ export const CardLinkContainer = styled(Link)`
 
       .tech-wrap {
         display: flex;
-        flex-direction: column;
+        flex-wrap: wrap;
         gap: 4px;
 
         span {
@@ -87,16 +85,15 @@ export const CardLinkContainer = styled(Link)`
     }
 
     aside {
-      // Isso foi muito importante utilizar, para que a div ao lado da main tivesse algum peso e pudesse empurrar a main para a esquerda já que pageCard, estava
-      margin-left: 70px;
       width: 100%;
       height: 100%;
 
       img {
-        scale: 2;
+        /* display: none; */
+        scale: 1.5;
         position: absolute;
-        top: 35%; /* Adjust to position the image vertically */
-        right: -330px; /* Adjust to position the image horizontally */
+        top: 25%; /* Adjust to position the image vertically */
+        right: -320px; /* Adjust to position the image horizontally */
         border-radius: 4px;
         width: 286.4px;
         height: 147.6px;
@@ -105,8 +102,27 @@ export const CardLinkContainer = styled(Link)`
           0 6px 20px 0 rgba(0, 0, 0, 0.19);
         transition: transform 0.3s ease;
 
-        @media only screen and (min-width: 500px) {
+        @media only screen and (min-width: 375px) {
+          display: block;
+          right: -330px; /* Adjust to position the image horizontally */
+          top: 40%; /* Adjust to position the image vertically */
+        }
+
+        @media only screen and (min-width: 425px) {
+          display: block;
+          right: -230px; /* Adjust to position the image horizontally */
+          top: 40%; /* Adjust to position the image vertically */
+        }
+
+        @media only screen and (min-width: 767px) {
+          display: block;
+          right: -230px; /* Adjust to position the image horizontally */
+          top: 40%; /* Adjust to position the image vertically */
+        }
+
+        @media only screen and (min-width: 1024px) {
           right: -200px; /* Adjust to position the image horizontally */
+          top: 40%; /* Adjust to position the image vertically */
         }
       }
     }
