@@ -162,7 +162,7 @@ export const cases = [
   },
   {
     id: 6,
-    title: 'Atrium Studio X Stay',
+    title: 'Atrium Studo by xstay',
     description:
       'Primeiro projeto feito por conta própria feito através dos meus conhecimentos adquiridos',
     technologies: ['HTML', 'SCSS'],
@@ -171,9 +171,9 @@ export const cases = [
   },
   {
     id: 7,
-    title: 'EBAC Fullstack Design Page',
+    title: 'EBAC Fullstack Design',
     description: 'Clone feito em exercício do curso da EBAC',
-    technologies: ['HTML', 'SCSS', 'Framer Motion'],
+    technologies: ['SCSS', 'Framer Motion'],
     img: EbacFullstack,
     link: 'https://22-exercicio-ebac-full-stack-designer-landing-page.vercel.app/',
   },

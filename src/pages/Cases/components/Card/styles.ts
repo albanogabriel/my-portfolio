@@ -88,7 +88,7 @@ export const CardLinkContainer = styled(Link)`
 
     aside {
       // Isso foi muito importante utilizar, para que a div ao lado da main tivesse algum peso e pudesse empurrar a main para a esquerda já que pageCard, estava
-      margin-left: 40px;
+      margin-left: 70px;
       width: 100%;
       height: 100%;
 
@@ -96,7 +96,7 @@ export const CardLinkContainer = styled(Link)`
         scale: 2;
         position: absolute;
         top: 35%; /* Adjust to position the image vertically */
-        right: -200px; /* Adjust to position the image horizontally */
+        right: -330px; /* Adjust to position the image horizontally */
         border-radius: 4px;
         width: 286.4px;
         height: 147.6px;
@@ -104,6 +104,10 @@ export const CardLinkContainer = styled(Link)`
           0 4px 8px 0 rgba(0, 0, 0, 0.2),
           0 6px 20px 0 rgba(0, 0, 0, 0.19);
         transition: transform 0.3s ease;
+
+        @media only screen and (min-width: 500px) {
+          right: -200px; /* Adjust to position the image horizontally */
+        }
       }
     }
   }
