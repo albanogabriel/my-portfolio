@@ -89,11 +89,11 @@ export const CardLinkContainer = styled(Link)`
       height: 100%;
 
       img {
-        /* display: none; */
-        scale: 1.5;
+        display: none;
+        scale: 2;
         position: absolute;
-        top: 25%; /* Adjust to position the image vertically */
-        right: -320px; /* Adjust to position the image horizontally */
+        top: 40%; /* Adjust to position the image vertically */
+        right: -300px; /* Adjust to position the image horizontally */
         border-radius: 4px;
         width: 286.4px;
         height: 147.6px;
@@ -102,27 +102,28 @@ export const CardLinkContainer = styled(Link)`
           0 6px 20px 0 rgba(0, 0, 0, 0.19);
         transition: transform 0.3s ease;
 
+        @media only screen and (min-width: 320px) {
+          display: none;
+        }
+
         @media only screen and (min-width: 375px) {
           display: block;
-          right: -330px; /* Adjust to position the image horizontally */
-          top: 40%; /* Adjust to position the image vertically */
+          right: -320px; /* Adjust to position the image horizontally */
         }
 
-        @media only screen and (min-width: 425px) {
+        @media only screen and (min-width: 430px) {
           display: block;
-          right: -230px; /* Adjust to position the image horizontally */
-          top: 40%; /* Adjust to position the image vertically */
+          right: -280px; /* Adjust to position the image horizontally */
         }
 
-        @media only screen and (min-width: 767px) {
+        @media only screen and (min-width: 500px) {
           display: block;
-          right: -230px; /* Adjust to position the image horizontally */
-          top: 40%; /* Adjust to position the image vertically */
+          right: -240px; /* Adjust to position the image horizontally */
         }
 
-        @media only screen and (min-width: 1024px) {
-          right: -200px; /* Adjust to position the image horizontally */
-          top: 40%; /* Adjust to position the image vertically */
+        @media only screen and (min-width: 600px) {
+          display: block;
+          right: -220px; /* Adjust to position the image horizontally */
         }
       }
     }
