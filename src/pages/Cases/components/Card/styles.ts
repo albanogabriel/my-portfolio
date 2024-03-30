@@ -102,10 +102,6 @@ export const CardLinkContainer = styled(Link)`
           0 6px 20px 0 rgba(0, 0, 0, 0.19);
         transition: transform 0.3s ease;
 
-        @media only screen and (min-width: 320px) {
-          display: none;
-        }
-
         @media only screen and (min-width: 375px) {
           display: block;
           right: -320px; /* Adjust to position the image horizontally */

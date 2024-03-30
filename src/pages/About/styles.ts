@@ -16,7 +16,7 @@ export const AboutPageContainer = styled.div`
       cursor: pointer;
       padding-inline: 8px;
       padding-bottom: 4px;
-      font-size: 0.875rem;
+      font-size: 0.625rem;
       border-bottom: 1px solid ${(props) => props.theme.color['gray-200']};
 
       &:hover {
@@ -25,6 +25,10 @@ export const AboutPageContainer = styled.div`
 
       &.checked {
         border-bottom: 2px solid ${(props) => props.theme.color['gray-075']};
+      }
+
+      @media only screen and (min-width: 420px) {
+        font-size: 0.875rem;
       }
     }
   }
