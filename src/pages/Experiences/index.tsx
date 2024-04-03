@@ -12,6 +12,12 @@ export function Experiences() {
     <ExperiencesContainer>
       <nav>
         <span
+          className={navIsActive === 'alltime' ? 'active' : ''}
+          onClick={() => setNavIsActive('alltime')}
+        >
+          All time
+        </span>
+        <span
           className={navIsActive === 'educacao' ? 'active' : ''}
           onClick={() => setNavIsActive('educacao')}
         >
@@ -23,16 +29,10 @@ export function Experiences() {
         >
           Profissional
         </span>
-        <span
-          className={navIsActive === 'alltime' ? 'active' : ''}
-          onClick={() => setNavIsActive('alltime')}
-        >
-          All time
-        </span>
       </nav>
-      {navIsActive === 'educacao' && <TimelineEducacao />}
-      {navIsActive === 'profissional' && <TimelineProfissional />}
       {navIsActive === 'alltime' && <TimelineAlltime />}
+      {/* {navIsActive === 'educacao' && <TimelineEducacao />}
+      {navIsActive === 'profissional' && <TimelineProfissional />} */}
     </ExperiencesContainer>
   )
 }
