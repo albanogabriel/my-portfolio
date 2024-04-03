@@ -2,8 +2,8 @@ import { useState } from 'react'
 
 import { ExperiencesContainer } from './styles'
 import { TimelineAlltime } from './TimelineAllTime'
-import { TimelineEducacao } from './TimelineEducacao'
-import { TimelineProfissional } from './TimelineProfissional'
+// import { TimelineEducacao } from './TimelineEducacao'
+// import { TimelineProfissional } from './TimelineProfissional'
 
 export function Experiences() {
   const [navIsActive, setNavIsActive] = useState('educacao')
