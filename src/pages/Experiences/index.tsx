@@ -2,11 +2,9 @@ import { useState } from 'react'
 
 import { ExperiencesContainer } from './styles'
 import { TimelineAlltime } from './TimelineAllTime'
-// import { TimelineEducacao } from './TimelineEducacao'
-// import { TimelineProfissional } from './TimelineProfissional'
 
 export function Experiences() {
-  const [navIsActive, setNavIsActive] = useState('educacao')
+  const [navIsActive, setNavIsActive] = useState('alltime')
 
   return (
     <ExperiencesContainer>
@@ -18,21 +16,21 @@ export function Experiences() {
           All time
         </span>
         <span
-          className={navIsActive === 'educacao' ? 'active' : ''}
-          onClick={() => setNavIsActive('educacao')}
+          className={navIsActive === 'frontend' ? 'active' : ''}
+          onClick={() => setNavIsActive('frontend')}
         >
-          Educação
+          Frontend
         </span>
         <span
-          className={navIsActive === 'profissional' ? 'active' : ''}
-          onClick={() => setNavIsActive('profissional')}
+          className={navIsActive === 'marketing' ? 'active' : ''}
+          onClick={() => setNavIsActive('marketing')}
         >
-          Profissional
+          Marketing
         </span>
       </nav>
       {navIsActive === 'alltime' && <TimelineAlltime />}
-      {/* {navIsActive === 'educacao' && <TimelineEducacao />}
-      {navIsActive === 'profissional' && <TimelineProfissional />} */}
+      {/* {navIsActive === 'frontend' && <TimelineFrontend />} */}
+      {/* {navIsActive === 'marketing' && <TimelineMarketing />} */}
     </ExperiencesContainer>
   )
 }

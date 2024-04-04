@@ -129,15 +129,6 @@ export function Header() {
                         Experiences
                       </NavLink>
                     </li>
-                    <li>
-                      <NavLink
-                        onClick={handleCloseMenuHamburger}
-                        to={'/education'}
-                        title="Education"
-                      >
-                        Education
-                      </NavLink>
-                    </li>
                   </ul>
                 </HamburgerMenuContainer>
               </PortalContainer>,

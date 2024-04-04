@@ -37,10 +37,6 @@ export const navBarDesktop = [
     route: '/experiences',
     title: 'experiences',
   },
-  {
-    route: '/education',
-    title: 'Education',
-  },
 ] as const
 
 export const Lists = [

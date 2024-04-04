@@ -5,6 +5,8 @@ export const TimelineContainer = styled.div`
   margin: 16px auto;
 
   .timeline {
+    display: flex;
+    flex-direction: column-reverse;
     position: relative;
     margin-left: 10px;
     margin-right: 40px;
@@ -48,7 +50,7 @@ export const TimelineContainer = styled.div`
           gap: 32px;
           font-size: 0.875rem;
           align-items: center;
-          left: 351px;
+          left: 383px;
         }
 
         .rounded {
@@ -91,6 +93,14 @@ export const TimelineContainer = styled.div`
         flex-direction: column;
         gap: 4px;
 
+        div {
+          display: flex;
+          gap: 12px;
+
+          svg {
+          }
+        }
+
         h2 {
           line-height: 1.2;
         }
@@ -108,7 +118,18 @@ export const TimelineContainer = styled.div`
           margin-top: 6px;
 
           &:last-of-type {
-            margin-bottom: 16px;
+            margin-bottom: 12px;
+          }
+        }
+
+        .buttonSpan {
+          cursor: pointer;
+          background-color: ${(props) => props.theme.color['gray-100']};
+          color: ${(props) => props.theme.color['gray-800']};
+
+          &:hover {
+            background-color: ${(props) => props.theme.color['gray-300']};
+            color: ${(props) => props.theme.color['gray-100']};
           }
         }
 
@@ -134,7 +155,7 @@ export const TimelineContainer = styled.div`
 
         @media only screen and (min-width: 1024px) {
           flex-direction: row-reverse;
-          left: 34px;
+          left: 37px;
           max-width: max-content;
         }
 
