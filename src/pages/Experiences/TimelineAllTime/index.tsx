@@ -1,6 +1,7 @@
 import { Book, Code, GraduationCap, SuitcaseSimple } from 'phosphor-react'
 import { useState } from 'react'
 
+import { ProgressBar } from './ProgressBar'
 import { TimelineContainer } from './styles'
 
 export function TimelineAlltime() {
@@ -27,6 +28,7 @@ export function TimelineAlltime() {
             <span>Graduação</span>
 
             <small>Pedra Branca, Palhoça, SC</small>
+            <ProgressBar progress={'100%'} />
           </div>
         </div>
 
@@ -185,6 +187,7 @@ export function TimelineAlltime() {
               </>
             )}
             <small>Florianópolis, SC</small>
+            <ProgressBar progress={'100%'} />
           </div>
         </div>
 
@@ -204,6 +207,7 @@ export function TimelineAlltime() {
             <span>Ads</span>
             <span>Graduação</span>
             <small>Florianópolis, SC</small>
+            <ProgressBar progress={'23.1%'} />
           </div>
         </div>
 
@@ -273,7 +277,7 @@ export function TimelineAlltime() {
           </div>
         </div>
 
-        {/* CURSO - Rocketseat */}
+        {/* CURSO - React Rocketseat */}
         <div className="container left-container">
           <div className="roundedContainer">
             <div className="rounded">
@@ -284,7 +288,85 @@ export function TimelineAlltime() {
           </div>
           <div className="text-box">
             <h2>ReactJS</h2>
-            <p>Rocketseat Ignite</p>
+            <p>Rocketseat</p>
+            <small>1 ano</small>
+
+            {rocketseat === false && (
+              <>
+                <span>React.js</span>
+                <span>Front-end</span>
+                <span
+                  className="buttonSpan"
+                  onClick={() => {
+                    setRocketseat(true)
+                  }}
+                >
+                  ver + 11
+                </span>
+              </>
+            )}
+
+            {rocketseat && (
+              <>
+                <span>React.js</span>
+                <span>Front-end</span>
+                <span>Next</span>
+                <span>Tailwind</span>
+                <span>Storybook</span>
+                <span>VITE</span>
+                <span>TypeScript</span>
+                <span>Styled-Components</span>
+                <span>ZOD</span>
+                <span>useForm</span>
+                <span>Stitches</span>
+                <span>Turborepo</span>
+                <span>ESLint</span>
+                <span
+                  className="buttonSpan"
+                  onClick={() => {
+                    setRocketseat(false)
+                  }}
+                >
+                  Fechar
+                </span>
+              </>
+            )}
+            <small>Florianópolis, SC</small>
+            <ProgressBar progress={'65%'} />
+          </div>
+        </div>
+
+        {/* TT&T - Front End Developer */}
+        <div className="container right-container">
+          <div className="roundedContainer">
+            <div className="rounded">
+              <Code color="black" size={16} />
+            </div>
+            <span>2023 - 2024</span>
+          </div>
+          <div className="text-box dev">
+            <h2>Front-end Developer</h2>
+            <p>TT&T Soluções em informática</p>
+            <small>6 meses</small>
+            <span>Front-end</span>
+            <span>Scrum Master</span>
+            <span>Gestão Ágil</span>
+            <small>São Paulo, SP</small>
+          </div>
+        </div>
+
+        {/* CURSO - DevOps */}
+        <div className="container left-container">
+          <div className="roundedContainer">
+            <div className="rounded">
+              {' '}
+              <Book color="black" size={16} />
+            </div>
+            <span>2023 - 2024</span>
+          </div>
+          <div className="text-box">
+            <h2>DevOps</h2>
+            <p>Rocketseat</p>
             <small>1 ano</small>
 
             {rocketseat === false && (
@@ -327,25 +409,65 @@ export function TimelineAlltime() {
               </>
             )}
             <small>Florianópolis, SC</small>
+            <ProgressBar progress={'10%'} />
           </div>
         </div>
 
-        {/* TT&T - Front End Developer */}
-        <div className="container right-container">
+        {/* CURSO - JAVA */}
+        <div className="container left-container">
           <div className="roundedContainer">
             <div className="rounded">
-              <Code color="black" size={16} />
+              {' '}
+              <Book color="black" size={16} />
             </div>
             <span>2023 - 2024</span>
           </div>
-          <div className="text-box dev">
-            <h2>Front-end Developer</h2>
-            <p>TT&T Soluções em informática</p>
-            <small>6 meses</small>
-            <span>Front-end</span>
-            <span>Scrum Master</span>
-            <span>Gestão Ágil</span>
-            <small>São Paulo, SP</small>
+          <div className="text-box">
+            <h2>Java</h2>
+            <p>Rocketseat</p>
+            <small>1 ano</small>
+
+            {rocketseat === false && (
+              <>
+                <span>React.js</span>
+                <span>Front-end</span>
+                <span
+                  className="buttonSpan"
+                  onClick={() => {
+                    setRocketseat(true)
+                  }}
+                >
+                  ver + 10
+                </span>
+              </>
+            )}
+
+            {rocketseat && (
+              <>
+                <span>React.js</span>
+                <span>Front-end</span>
+                <span>Storybook</span>
+                <span>VITE</span>
+                <span>TypeScript</span>
+                <span>Styled-Components</span>
+                <span>ZOD</span>
+                <span>useForm</span>
+                <span>Stitches</span>
+                <span>Turborepo</span>
+                <span>Next</span>
+                <span>ESLint</span>
+                <span
+                  className="buttonSpan"
+                  onClick={() => {
+                    setRocketseat(false)
+                  }}
+                >
+                  Fechar
+                </span>
+              </>
+            )}
+            <small>Florianópolis, SC</small>
+            <ProgressBar progress={'2%'} />
           </div>
         </div>
       </div>
