@@ -5,7 +5,9 @@ import { ProgressBar } from './ProgressBar'
 import { TimelineContainer } from './styles'
 
 export function TimelineAlltime() {
-  const [rocketseat, setRocketseat] = useState(false)
+  const [react, setReact] = useState(false)
+  // const [java, setJava] = useState(false)
+  const [devOps, setDevOps] = useState(false)
   const [ebac, setEBAC] = useState(false)
   const [santanderX, setSantanderX] = useState(false)
 
@@ -291,14 +293,14 @@ export function TimelineAlltime() {
             <p>Rocketseat</p>
             <small>1 ano</small>
 
-            {rocketseat === false && (
+            {react === false && (
               <>
                 <span>React.js</span>
                 <span>Front-end</span>
                 <span
                   className="buttonSpan"
                   onClick={() => {
-                    setRocketseat(true)
+                    setReact(true)
                   }}
                 >
                   ver + 11
@@ -306,7 +308,7 @@ export function TimelineAlltime() {
               </>
             )}
 
-            {rocketseat && (
+            {react && (
               <>
                 <span>React.js</span>
                 <span>Front-end</span>
@@ -324,7 +326,7 @@ export function TimelineAlltime() {
                 <span
                   className="buttonSpan"
                   onClick={() => {
-                    setRocketseat(false)
+                    setReact(false)
                   }}
                 >
                   Fechar
@@ -369,14 +371,14 @@ export function TimelineAlltime() {
             <p>Rocketseat</p>
             <small>1 ano</small>
 
-            {rocketseat === false && (
+            {devOps === false && (
               <>
-                <span>React.js</span>
-                <span>Front-end</span>
+                <span>Cultura DevOps</span>
+                <span>Fundamentos</span>
                 <span
                   className="buttonSpan"
                   onClick={() => {
-                    setRocketseat(true)
+                    setDevOps(true)
                   }}
                 >
                   ver + 10
@@ -384,24 +386,23 @@ export function TimelineAlltime() {
               </>
             )}
 
-            {rocketseat && (
+            {devOps && (
               <>
-                <span>React.js</span>
-                <span>Front-end</span>
-                <span>Storybook</span>
-                <span>VITE</span>
-                <span>TypeScript</span>
-                <span>Styled-Components</span>
-                <span>ZOD</span>
-                <span>useForm</span>
-                <span>Stitches</span>
-                <span>Turborepo</span>
-                <span>Next</span>
-                <span>ESLint</span>
+                <span>Cultura DevOps</span>
+                <span>Fundamentos</span>
+                <span>CALMS</span>
+                <span>Containers</span>
+                <span>Docker Compose</span>
+                <span>IAC</span>
+                <span>AWS</span>
+                <span>GCP</span>
+                <span>CI / CD</span>
+                <span>Kubernets</span>
+
                 <span
                   className="buttonSpan"
                   onClick={() => {
-                    setRocketseat(false)
+                    setDevOps(false)
                   }}
                 >
                   Fechar
@@ -414,7 +415,7 @@ export function TimelineAlltime() {
         </div>
 
         {/* CURSO - JAVA */}
-        <div className="container left-container">
+        {/* <div className="container left-container">
           <div className="roundedContainer">
             <div className="rounded">
               {' '}
@@ -427,14 +428,14 @@ export function TimelineAlltime() {
             <p>Rocketseat</p>
             <small>1 ano</small>
 
-            {rocketseat === false && (
+            {java === false && (
               <>
                 <span>React.js</span>
                 <span>Front-end</span>
                 <span
                   className="buttonSpan"
                   onClick={() => {
-                    setRocketseat(true)
+                    setJava(true)
                   }}
                 >
                   ver + 10
@@ -442,7 +443,7 @@ export function TimelineAlltime() {
               </>
             )}
 
-            {rocketseat && (
+            {java && (
               <>
                 <span>React.js</span>
                 <span>Front-end</span>
@@ -469,7 +470,7 @@ export function TimelineAlltime() {
             <small>Florianópolis, SC</small>
             <ProgressBar progress={'2%'} />
           </div>
-        </div>
+        </div> */}
       </div>
     </TimelineContainer>
   )

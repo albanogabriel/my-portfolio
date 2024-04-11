@@ -13,17 +13,23 @@ export function AboutMe() {
         <BigTitle>Sobre Mim</BigTitle>
         <SmallParagraphStyled>
           <div>
-            <h3>Dados demográficos</h3>
             <div>
-              <p>Nome: Gabriel Albano da Silva </p>
-              <p>Idade: {age}</p>
-              <p>Nascimento: {birthDate}</p>
-              <p>Cidade: Florianópolis</p>
+              <p>
+                <strong>Nome:</strong> Gabriel Albano da Silva{' '}
+              </p>
+              <p>
+                <strong>Idade:</strong> {age}
+              </p>
+              <p>
+                <strong>Nascimento:</strong> {birthDate}
+              </p>
+              <p>
+                <strong>Cidade:</strong> Florianópolis
+              </p>
             </div>
           </div>
           <ChileImg src={chileImg} alt="" />
           <div>
-            <h3>Jornada</h3>
             <div>
               <p>
                 Sou graduado em Publicidade e Propaganda através da faculdade
