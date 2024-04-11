@@ -1,4 +1,4 @@
-import chileImg from '../../../../../assets/Captura de Tela 2024-04-10 às 15.59.50.jpg'
+import chileImg from '../../../../../assets/chile.jpg'
 import { useAge } from '../../../../../components/hooks/useAge'
 import { BigTitle } from '../../../../../styles/global'
 import { Section } from '../../../styles'
