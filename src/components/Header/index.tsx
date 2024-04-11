@@ -114,8 +114,8 @@ export function Header() {
                     <li>
                       <NavLink
                         onClick={handleCloseMenuHamburger}
-                        to={'/cases'}
-                        title="Cases"
+                        to={'/projetos'}
+                        title="Projetos"
                       >
                         Cases
                       </NavLink>
