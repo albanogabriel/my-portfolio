@@ -30,12 +30,12 @@ export const navBarDesktop = [
     title: 'About',
   },
   {
-    route: '/cases',
-    title: 'Cases',
+    route: '/projetos',
+    title: 'Projetos',
   },
   {
     route: '/experiences',
-    title: 'experiences',
+    title: 'Experiences',
   },
 ] as const
 
@@ -195,7 +195,7 @@ export const cases = [
     description: 'Portfolio usando Stats/Embed code do GitHub ',
     technologies: ['HTML', 'CSS', 'Embed code'],
     img: FirstPortfolio,
-    link: 'https://21-landing-page-disney-8scxjw55o-albanogabriel.vercel.app/',
+    link: 'https://29-react-type-script-portfolio.vercel.app/',
   },
   {
     id: 10,

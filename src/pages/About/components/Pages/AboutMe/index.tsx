@@ -1,6 +1,8 @@
+import chileImg from '../../../../../assets/Captura de Tela 2024-04-10 às 15.59.50.jpg'
 import { useAge } from '../../../../../components/hooks/useAge'
-import { BigTitle, SmallParagraph } from '../../../../../styles/global'
+import { BigTitle } from '../../../../../styles/global'
 import { Section } from '../../../styles'
+import { ChileImg, SmallParagraphStyled } from './styles'
 
 export function AboutMe() {
   const { age, birthDate } = useAge()
@@ -9,7 +11,7 @@ export function AboutMe() {
     <Section>
       <div>
         <BigTitle>Sobre Mim</BigTitle>
-        <SmallParagraph>
+        <SmallParagraphStyled>
           <div>
             <h3>Dados demográficos</h3>
             <div>
@@ -19,7 +21,7 @@ export function AboutMe() {
               <p>Cidade: Florianópolis</p>
             </div>
           </div>
-          <br />
+          <ChileImg src={chileImg} alt="" />
           <div>
             <h3>Jornada</h3>
             <div>
@@ -79,7 +81,7 @@ export function AboutMe() {
               </p>
             </div>
           </div>
-        </SmallParagraph>
+        </SmallParagraphStyled>
       </div>
     </Section>
   )

@@ -1,12 +1,12 @@
 import { cases } from '../../lib/data'
 import { BigTitle } from '../../styles/global'
-import { Card } from './components/Card'
+import { Card } from './components/Projetos'
 import { CardContainer, CasesPageContainer } from './styles'
 
-export function Cases() {
+export function Projetos() {
   return (
     <CasesPageContainer>
-      <BigTitle>Cases</BigTitle>
+      <BigTitle>Projetos</BigTitle>
 
       <CardContainer>
         {cases.map((card) => {

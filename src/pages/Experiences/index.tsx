@@ -1,7 +1,9 @@
 import { useState } from 'react'
 
 import { ExperiencesContainer } from './styles'
+import { TimelineFrontend } from './Timeline Frontend'
 import { TimelineAlltime } from './TimelineAllTime'
+import { TimelineMKT } from './TimelineMKT'
 
 export function Experiences() {
   const [navIsActive, setNavIsActive] = useState('alltime')
@@ -29,8 +31,8 @@ export function Experiences() {
         </span>
       </nav>
       {navIsActive === 'alltime' && <TimelineAlltime />}
-      {/* {navIsActive === 'frontend' && <TimelineFrontend />} */}
-      {/* {navIsActive === 'marketing' && <TimelineMarketing />} */}
+      {navIsActive === 'frontend' && <TimelineFrontend />}
+      {navIsActive === 'marketing' && <TimelineMKT />}
     </ExperiencesContainer>
   )
 }

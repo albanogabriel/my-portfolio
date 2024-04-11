@@ -3,8 +3,14 @@ import { useEffect, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 import { LinkButtonPrimary } from '../../components/LinkButtonPrimary'
-import { BigTitle, PageContainer, SmallParagraph } from '../../styles/global'
-import { ButtonContainer, HomeContainer, TextContainer } from './styles'
+import { BigTitle, SmallParagraph } from '../../styles/global'
+import { ProjectCard } from './components/ProjectCard'
+import {
+  ButtonContainer,
+  HomeContainer,
+  HomePageContainer,
+  TextContainer,
+} from './styles'
 export function Home() {
   const [isSmallScreen, setIsSmallScreen] = useState(window.innerWidth <= 890)
 
@@ -22,13 +28,14 @@ export function Home() {
   }, [])
 
   return (
-    <PageContainer>
+    <HomePageContainer>
       <HomeContainer>
         <TextContainer>
           <div>
             <BigTitle>Olá,</BigTitle>
+
             <SmallParagraph>
-              Me chamo <strong>Gabriel Albano.</strong> Desempenho o papel de{' '}
+              Me chamo <strong>Gabriel Albano. </strong> Desempenho o papel de{' '}
               <strong>Scrum Master</strong> em uma equipe de{' '}
               <strong>Desenvolvimento Front-end.</strong> Tenho formação em
               Publicidade Propaganda e atualmente iniciei a faculdade de ADS
@@ -65,6 +72,8 @@ export function Home() {
           </LinkButtonPrimary>
         </ButtonContainer>
       </HomeContainer>
-    </PageContainer>
+
+      <ProjectCard />
+    </HomePageContainer>
   )
 }
