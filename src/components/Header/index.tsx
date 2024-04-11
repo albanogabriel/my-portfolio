@@ -117,7 +117,7 @@ export function Header() {
                         to={'/projetos'}
                         title="Projetos"
                       >
-                        Cases
+                        Projetos
                       </NavLink>
                     </li>
                     <li>
