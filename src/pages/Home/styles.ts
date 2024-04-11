@@ -18,8 +18,8 @@ export const HomePageContainer = styled.div`
   /* Media query for desktops (1024px) */
   @media (min-width: 1024px) {
     display: grid;
-    grid-template-columns: 35% auto;
-    gap: 64px;
+    grid-template-columns: 40% auto;
+    gap: 88px;
     margin: 0 auto;
     overflow-x: hidden;
   }

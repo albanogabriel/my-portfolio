@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { SmallParagraph } from '../../../../../styles/global'
 
 export const ChileImg = styled.img`
-  width: 400px;
+  width: 100%;
   filter: grayscale(50%);
   border-radius: 4px;
   border: 1px solid ${(props) => props.theme.color['gray-200']};
