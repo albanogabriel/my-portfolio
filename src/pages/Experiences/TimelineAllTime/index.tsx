@@ -303,7 +303,7 @@ export function TimelineAlltime() {
                     setReact(true)
                   }}
                 >
-                  ver + 11
+                  ver + 12
                 </span>
               </>
             )}
@@ -323,6 +323,7 @@ export function TimelineAlltime() {
                 <span>Stitches</span>
                 <span>Turborepo</span>
                 <span>ESLint</span>
+                <span>React-Helmet</span>
                 <span
                   className="buttonSpan"
                   onClick={() => {
