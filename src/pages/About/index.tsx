@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { NavLink } from 'react-router-dom'
 
 import { Lists } from '../../lib/data'
@@ -23,6 +24,7 @@ export function About() {
 
   return (
     <AboutPageContainer>
+      <Helmet title="About" />
       <nav>
         <span
           onClick={() => {

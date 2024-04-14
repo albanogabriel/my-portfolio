@@ -1,5 +1,6 @@
 import { Book, Code, GraduationCap, SuitcaseSimple } from 'phosphor-react'
 import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 
 import { TimelineContainer } from './styles'
 
@@ -10,6 +11,7 @@ export function TimelineFrontend() {
 
   return (
     <TimelineContainer>
+      <Helmet title="Front-end" />
       <div className="timeline">
         {/* Marketing - Pedra Branca */}
         <div className="container right-container">

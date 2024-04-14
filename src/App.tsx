@@ -1,3 +1,4 @@
+import { Helmet, HelmetProvider } from 'react-helmet-async'
 import { BrowserRouter } from 'react-router-dom'
 import { ThemeProvider } from 'styled-components'
 
@@ -7,11 +8,14 @@ import { darkTheme } from './styles/theme/darkTheme'
 
 export function App() {
   return (
-    <ThemeProvider theme={darkTheme}>
-      <BrowserRouter>
-        <GlobalStyle />
-        <Router />
-      </BrowserRouter>
-    </ThemeProvider>
+    <HelmetProvider>
+      <ThemeProvider theme={darkTheme}>
+        <BrowserRouter>
+          <GlobalStyle />
+          <Helmet titleTemplate="%s | albano.portfolio" />
+          <Router />
+        </BrowserRouter>
+      </ThemeProvider>
+    </HelmetProvider>
   )
 }

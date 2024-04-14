@@ -1,10 +1,13 @@
 import { GraduationCap, SuitcaseSimple } from 'phosphor-react'
+import { Helmet } from 'react-helmet-async'
 
 import { TimelineContainer } from './styles'
 
 export function TimelineMKT() {
   return (
     <TimelineContainer>
+      <Helmet title="Marketing" />
+
       <div className="timeline">
         {/* Unisul - Publicidade e Propaganda */}
         <div className="container left-container">

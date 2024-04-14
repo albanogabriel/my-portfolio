@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 
 import { ExperiencesContainer } from './styles'
 import { TimelineFrontend } from './Timeline Frontend'
@@ -10,6 +11,7 @@ export function Experiences() {
 
   return (
     <ExperiencesContainer>
+      <Helmet title="Experiences" />
       <nav>
         <span
           className={navIsActive === 'alltime' ? 'active' : ''}

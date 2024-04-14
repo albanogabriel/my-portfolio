@@ -1,5 +1,6 @@
 import { ArrowArcLeft, ArrowRight } from 'phosphor-react'
 import { useEffect, useState } from 'react'
+import { Helmet } from 'react-helmet-async'
 import { NavLink } from 'react-router-dom'
 
 import { LinkButtonPrimary } from '../../components/LinkButtonPrimary'
@@ -29,6 +30,7 @@ export function Home() {
 
   return (
     <HomePageContainer>
+      <Helmet title="Home" />
       <HomeContainer>
         <TextContainer>
           <div>
