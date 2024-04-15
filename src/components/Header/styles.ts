@@ -38,6 +38,7 @@ export const HeaderMobileContainer = styled.header<HeaderProps>`
   div {
     a {
       white-space: nowrap;
+      letter-spacing: -0.04em;
       list-style: none;
       text-decoration: none;
       color: ${({ theme }) => theme.color['gray-050']};
@@ -129,6 +130,7 @@ export const HamburgerMenuContainer = styled.div`
       a {
         color: ${({ theme }) => theme.color['gray-100']};
         text-decoration: none;
+        letter-spacing: -0.04em;
 
         &:hover {
           color: ${({ theme }) => theme.color['gray-050']};

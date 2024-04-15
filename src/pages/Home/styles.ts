@@ -5,23 +5,32 @@ export const AboutPageContainer = styled.div``
 export const HomePageContainer = styled.div`
   //mobile first
   width: 100%;
+  height: 95vh;
   padding: 32px 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  footer {
+    font-size: 12px;
+  }
 
   /* Media query for tablets (767px) */
   @media (min-width: 768px) {
     padding: 48px;
-    display: flex;
-    flex-direction: column;
     gap: 64px;
   }
 
   /* Media query for desktops (1024px) */
   @media (min-width: 1024px) {
-    display: grid;
-    grid-template-columns: 45% auto;
-    gap: 88px;
-    margin: 0 auto;
     overflow-x: hidden;
+
+    main {
+      display: grid;
+      grid-template-columns: 45% auto;
+      gap: 88px;
+      margin: 0 auto;
+    }
   }
 `
 

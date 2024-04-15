@@ -74,6 +74,7 @@ export const BigTitle = styled.h1`
   font-size: ${({ theme }) => theme.textSizes['4xl']};
   font-weight: 100;
   line-height: ${({ theme }) => theme.lineHeight.base};
+  letter-spacing: -0.02em;
 `
 
 export const SmallParagraph = styled.p`
@@ -81,6 +82,7 @@ export const SmallParagraph = styled.p`
   font-size: ${({ theme }) => theme.textSizes.lg};
   font-weight: 300;
   line-height: ${({ theme }) => theme.lineHeight.base};
+  letter-spacing: -0.005em;
 
   strong {
     font-weight: 700;
