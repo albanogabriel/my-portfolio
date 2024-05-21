@@ -17,6 +17,7 @@ import GitHubBlog from '../assets/projectImgs/GithubBlog.jpg'
 import IfoodClone from '../assets/projectImgs/IfoodClone.jpg'
 import NetflixClone from '../assets/projectImgs/NetflixClone.jpg'
 import NonAbstractGallery from '../assets/projectImgs/NonAbstractGallery.jpg'
+import PizzaShop from '../assets/projectImgs/Pizzashop.jpg'
 import Pomodoro from '../assets/projectImgs/Pomodoro.jpg'
 import ToDo from '../assets/projectImgs/ToDo.jpg'
 import TokyoLP from '../assets/projectImgs/TokyoLP.jpg'
@@ -115,14 +116,6 @@ export const cases = [
     id: 2,
     title: 'Coffe Delivery',
     description: 'Plataforma para pedidos de café',
-    technologies: ['React JS', 'Styled-component'],
-    img: CoffeDelivery,
-    link: 'https://coffe-delivery-app.vercel.app/',
-  },
-  {
-    id: 3,
-    title: 'Coffe Delivery',
-    description: 'Plataforma para pedidos de café',
     technologies: [
       'React JS',
       'ContextAPI',
@@ -134,6 +127,24 @@ export const cases = [
     img: CoffeDelivery,
     link: 'https://coffe-delivery-app.vercel.app/',
   },
+  {
+    id: 3,
+    title: 'Pizza Shop',
+    description: 'Dashboard pedidos café',
+    technologies: [
+      'React',
+      'React-Query',
+      'Tailwind',
+      'ShadcnUI',
+      'Axios',
+      'Radix',
+      'Zod',
+    ],
+    img: PizzaShop,
+    link: 'https://github.com/albanogabriel/pizzashop-web/',
+    inProgress: true,
+  },
+
   {
     id: 4,
     title: 'GitHub Blog',
