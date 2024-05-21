@@ -42,7 +42,7 @@ export function Home() {
                 <strong>Scrum Master</strong> em uma equipe de{' '}
                 <strong>Desenvolvimento Front-end.</strong> Tenho formação em
                 Publicidade Propaganda e atualmente iniciei a faculdade de ADS
-                (Análise e Desenv. de Sistemas). Meu foco é{' '}
+                (Análise e Desenvolvimento de Sistemas). Meu foco é{' '}
                 <strong>React</strong> (Next.js)
               </SmallParagraph>
             </div>
@@ -78,7 +78,7 @@ export function Home() {
 
         <ProjectCard />
       </main>
-      <footer className="text-sm">
+      <footer>
         Portfólio &copy; albanogabriel - {new Date().getFullYear()}
       </footer>
     </HomePageContainer>

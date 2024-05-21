@@ -32,19 +32,20 @@ export function AboutMe() {
           <div>
             <div>
               <p>
-                Sou graduado em Publicidade e Propaganda através da faculdade
-                UNISUL em 2022. Após algumas experiências profissionais no
-                Marketing e UX / UI Design, decidi mudar a rota de minha vida
-                profissional
+                Me graduei em 2022 em Publicidade e Propaganda através da
+                faculdade UNISUL. Após significativas experiências profissionais
+                no Marketing e UX / UI Design, decidi mudar a rota de minha vida
+                profissional.
               </p>
               <br />
               <p>
-                Para o início dessa nova jornada focada em tecnologia escolhi
-                fazer a faculdade de Análise e Desenvolvimento de Sistemas. O
-                objetivo é abrir portas através de um estágio para o mercado de
-                trabalho na área de Desenvolvimento Front-end. O faculdade
-                também me proporciona conhecimentos fundamentais e base teórica
-                sobre o universo de programação e tecnologia.
+                Para dar início nessa nova jornada focada em tecnologia me
+                matriculei na faculdade de Análise e Desenvolvimento de
+                Sistemas, com objetivo de abrir portas para o mercado de
+                trabalho na área de Desenvolvimento Front-end através de um
+                estágio. A faculdade também está me proporcionando conhecimentos
+                fundamentais e base teórica sobre o universo de programação e
+                tecnologia.
               </p>
               <br />
               <p>
@@ -52,15 +53,14 @@ export function AboutMe() {
                 busquei a faculdade com melhor educação, didática e mensalidade
                 acessível segundo reviews e feedback dos estudantes. Escolhi a
                 UNICESUMAR com foco no objetivo de dar o primeiro passo nessa
-                minha nova carreira
+                minha nova carreira.
               </p>
               <br />
               <p>
                 Atualmente em meu estágio atuo como Scrum master em uma squad de
                 desenvolvimento Front-End, onde estamos desenvolvendo o HiPizza,
-                uma plataforma que conecta clientes que possuem o desejo de
-                comer pizza no conforto de sua casa e estabelecimentos que
-                querem conectar seus produtos ao clientes.
+                uma plataforma que conecta clientes e estabelecimentos que
+                disponibilizam seus produtos dentro da plataforma.
               </p>
               <br />
               <p>
@@ -75,7 +75,7 @@ export function AboutMe() {
               </p>
               <p>
                 Em um futuro próximo almejo fazer os cursos de: (React Native,
-                Tailwind, Framer Motion, SEO, Node, Java, Sprintboot)
+                Tailwind, Framer Motion, SEO, Node, Java, Springboot)
               </p>
               <br />
               <p>

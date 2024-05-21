@@ -5,14 +5,16 @@ export const AboutPageContainer = styled.div``
 export const HomePageContainer = styled.div`
   //mobile first
   width: 100%;
-  height: 95vh;
+  height: 100vh;
   padding: 32px 24px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 
   footer {
     font-size: 12px;
+    margin-top: auto;
+    margin-bottom: 32px;
   }
 
   /* Media query for tablets (767px) */
