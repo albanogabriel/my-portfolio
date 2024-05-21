@@ -81,6 +81,14 @@ export const CardLinkContainer = styled(Link)`
           border-radius: 6px;
           white-space: nowrap;
         }
+
+        .job {
+          background-color: #366838;
+        }
+
+        .inProgress {
+          background-color: #daa63f;
+        }
       }
     }
 
