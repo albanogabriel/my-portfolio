@@ -370,7 +370,7 @@ export function TimelineAlltime() {
           <div className="text-box">
             <h2>DevOps</h2>
             <p>Rocketseat</p>
-            <small>1 ano</small>
+            <small>14 horas</small>
 
             {devOps === false && (
               <>
@@ -412,6 +412,30 @@ export function TimelineAlltime() {
             )}
             <small>Florianópolis, SC</small>
             <ProgressBar progress={'10%'} />
+          </div>
+        </div>
+
+        {/* CURSO - Redux + Zustand */}
+        <div className="container left-container">
+          <div className="roundedContainer">
+            <div className="rounded">
+              {' '}
+              <Book color="black" size={16} />
+            </div>
+            <span>2024 - 2024 </span>
+          </div>
+          <div className="text-box">
+            <h2>Redux + Zustand</h2>
+            <p>Rocketseat</p>
+            <small>4 horas</small>
+
+            <span>Redux</span>
+            <span>Redux Toolkit</span>
+            <span>Context API + useReducer</span>
+            <span>Zustand</span>
+
+            <small>Florianópolis, SC</small>
+            <ProgressBar progress={'30%'} />
           </div>
         </div>
 
