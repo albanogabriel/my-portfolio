@@ -1,5 +1,5 @@
 import chileImg from '../../../../../assets/chile.jpg'
-import { useAge } from '../../../../../components/hooks/useAge'
+import { useAge } from '../../../../../hooks/useAge'
 import { BigTitle } from '../../../../../styles/global'
 import { Section } from '../../../styles'
 import { ChileImg, SmallParagraphStyled } from './styles'
