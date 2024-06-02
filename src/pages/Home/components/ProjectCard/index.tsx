@@ -1,15 +1,15 @@
-import AtriumStudios from '../../../../assets/projectImgs/AtriumStudios.jpg'
-import BirthdayPage from '../../../../assets/projectImgs/BirthdayPage.jpg'
-import CoffeDelivery from '../../../../assets/projectImgs/CoffeDelivery.jpg'
-import DisneyPlus from '../../../../assets/projectImgs/DisneyPlus.jpg'
-import DTMoney from '../../../../assets/projectImgs/DT-Money.jpg'
-import EbacFullstack from '../../../../assets/projectImgs/EBACFullstack.jpg'
-import FeedApp from '../../../../assets/projectImgs/FeedApp.jpg'
-import FirstPortfolio from '../../../../assets/projectImgs/FirstPortfolio.jpg'
-import FlashCards from '../../../../assets/projectImgs/Flashcards.jpg'
-import GitHubBlog from '../../../../assets/projectImgs/GithubBlog.jpg'
-import NonAbstractGallery from '../../../../assets/projectImgs/NonAbstractGallery.jpg'
-import Pomodoro from '../../../../assets/projectImgs/Pomodoro.jpg'
+import AtriumStudios from '../../../../assets/projectImgs/AtriumStudios.webp'
+import BirthdayPage from '../../../../assets/projectImgs/birthdaypage.webp'
+import CoffeDelivery from '../../../../assets/projectImgs/coffedelivery.webp'
+import DisneyPlus from '../../../../assets/projectImgs/DisneyPlus.webp'
+import DTMoney from '../../../../assets/projectImgs/dt-money.webp'
+import EbacFullstack from '../../../../assets/projectImgs/EBACFullstack.webp'
+import FeedApp from '../../../../assets/projectImgs/FeedApp.webp'
+import FirstPortfolio from '../../../../assets/projectImgs/firstportfolio.webp'
+import FlashCards from '../../../../assets/projectImgs/Flashcards.webp'
+import GitHubBlog from '../../../../assets/projectImgs/githubblog.webp'
+import NonAbstractGallery from '../../../../assets/projectImgs/NonAbstractGallery.webp'
+import Pomodoro from '../../../../assets/projectImgs/pomodoro.webp'
 // import IfoodClone from '../../../../assets/projectImgs/IfoodClone.jpg'
 // import NetflixClone from '../../../../assets/projectImgs/NetflixClone.jpg'
 // import ToDo from '../../../../assets/projectImgs/ToDo.jpg'
@@ -26,7 +26,7 @@ export function ProjectCard() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={AtriumStudios} alt="Imagem 1" />
+            <img src={AtriumStudios} loading="lazy" alt="Imagem 1" />
           </a>
         </div>
         <div className="card">
@@ -35,7 +35,7 @@ export function ProjectCard() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={NonAbstractGallery} alt="Imagem 2" />
+            <img src={NonAbstractGallery} loading="lazy" alt="Imagem 2" />
           </a>
         </div>
         <div className="card">
@@ -44,7 +44,7 @@ export function ProjectCard() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={Pomodoro} alt="Imagem 2" />
+            <img src={Pomodoro} loading="lazy" alt="Imagem 2" />
           </a>
         </div>
         <a href="/projetos">Ver todo os Cases</a>
@@ -56,7 +56,7 @@ export function ProjectCard() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={CoffeDelivery} alt="Imagem 3" />
+            <img src={CoffeDelivery} loading="lazy" alt="Imagem 3" />
           </a>
         </div>
         <div className="card">
@@ -65,7 +65,7 @@ export function ProjectCard() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={DisneyPlus} alt="Imagem 4" />
+            <img src={DisneyPlus} loading="lazy" alt="Imagem 4" />
           </a>
         </div>
         <div className="card">
@@ -74,7 +74,7 @@ export function ProjectCard() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={FirstPortfolio} alt="Imagem 5" />
+            <img src={FirstPortfolio} loading="lazy" alt="Imagem 5" />
           </a>
         </div>
         <div className="card">
@@ -83,7 +83,7 @@ export function ProjectCard() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={BirthdayPage} alt="Imagem 5" />
+            <img src={BirthdayPage} loading="lazy" alt="Imagem 5" />
           </a>
         </div>
         <div className="card">
@@ -92,7 +92,7 @@ export function ProjectCard() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={DTMoney} alt="Imagem 5" />
+            <img src={DTMoney} loading="lazy" alt="Imagem 5" />
           </a>
         </div>
       </div>
@@ -103,7 +103,7 @@ export function ProjectCard() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={EbacFullstack} alt="Imagem 6" />
+            <img src={EbacFullstack} loading="lazy" alt="Imagem 6" />
           </a>
         </div>
         <div className="card">
@@ -112,7 +112,7 @@ export function ProjectCard() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={FeedApp} alt="Imagem 7" />
+            <img src={FeedApp} loading="lazy" alt="Imagem 7" />
           </a>
         </div>
         <div className="card">
@@ -121,12 +121,12 @@ export function ProjectCard() {
             target="_blank"
             rel="noreferrer"
           >
-            <img src={GitHubBlog} alt="Imagem 7" />
+            <img src={GitHubBlog} loading="lazy" alt="Imagem 7" />
           </a>
         </div>
         <div className="card">
           <a href="" target="_blank">
-            <img src={FlashCards} alt="Imagem 7" />
+            <img src={FlashCards} loading="lazy" alt="Imagem 7" />
           </a>
         </div>
       </div>
