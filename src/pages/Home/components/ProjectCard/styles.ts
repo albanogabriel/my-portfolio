@@ -45,7 +45,7 @@ export const GridContainer = styled.div`
     }
 
     .card img {
-      border: 1px solid ${(props) => props.theme.color['gray-075']};
+      /* border: 1px solid ${(props) => props.theme.color['gray-075']}; */
       border-radius: 4px;
       width: 100%;
       height: auto;
