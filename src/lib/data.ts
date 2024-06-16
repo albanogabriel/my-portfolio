@@ -20,6 +20,7 @@ import NetflixClone from '../assets/projectImgs/netflixclone.webp'
 import NonAbstractGallery from '../assets/projectImgs/NonAbstractGallery.webp'
 import PizzaShop from '../assets/projectImgs/Pizzashop.webp'
 import Pomodoro from '../assets/projectImgs/pomodoro.webp'
+import ReduxPlayer from '../assets/projectImgs/redux-player.webp'
 import ToDo from '../assets/projectImgs/todo.webp'
 import TokyoLP from '../assets/projectImgs/TokyoLP.webp'
 
@@ -105,6 +106,14 @@ export const skillsData = [
 export const cases = [
   {
     id: 1,
+    title: 'Redux Player',
+    description: 'Global state with redux and side effects.',
+    technologies: ['Redux Toolkit', 'Tailwind', 'Zustand'],
+    img: ReduxPlayer,
+    link: 'https://player-redux-sigma.vercel.app/',
+  },
+  {
+    id: 2,
     title: 'Dynamox Charts',
     description: 'Teste técnico da empresa Dynamox',
     technologies: [
@@ -118,7 +127,7 @@ export const cases = [
     link: 'https://dynamox-datachart.vercel.app/',
   },
   {
-    id: 2,
+    id: 3,
     type: 'job',
     title: 'Criptografia LP',
     description: 'Solução para proteger e gerenciar seus ativos digitais',
@@ -128,7 +137,7 @@ export const cases = [
     inProgress: true,
   },
   {
-    id: 3,
+    id: 4,
     title: 'Coffe Delivery',
     description: 'Plataforma para pedidos de café',
     technologies: [
@@ -143,11 +152,10 @@ export const cases = [
     link: 'https://coffe-delivery-app.vercel.app/',
   },
   {
-    id: 4,
+    id: 5,
     title: 'Pizza Shop',
     description: 'Dashboard pedidos café',
     technologies: [
-      'React',
       'React-Query',
       'Tailwind',
       'ShadcnUI',
@@ -161,55 +169,55 @@ export const cases = [
   },
 
   {
-    id: 5,
+    id: 6,
     title: 'GitHub Blog',
     description: 'Buscar Issues via github API',
-    technologies: ['React JS', 'Styled-component', 'API Github'],
+    technologies: ['React', 'Styled-component', 'API Github'],
     img: GitHubBlog,
     link: 'https://github-blog-albanogabriel.vercel.app/',
   },
   {
-    id: 6,
+    id: 7,
     title: 'DT-Money',
     description: 'Use npx json server server.json para habilitar as transações',
-    technologies: ['React JS', 'Styled-component', 'JSON Server'],
+    technologies: ['React', 'Styled-component', 'JSON Server'],
     img: DTMoney,
     link: 'https://dt-money-albanogabriel.vercel.app/',
   },
   {
-    id: 7,
+    id: 8,
     title: 'Pomodo Timer',
     description: 'Pomodoro Timer usando métodos JavaScript',
-    technologies: ['React JS', 'CSS Modules', 'date-fns'],
+    technologies: ['React', 'CSS Modules', 'date-fns'],
     img: Pomodoro,
     link: 'https://pomodoro-timer-app-six.vercel.app/',
   },
   {
-    id: 8,
+    id: 9,
     title: 'To Do',
     description: 'To do App, príncipios de POO',
-    technologies: ['React JS', 'CSS Modules', 'POO'],
+    technologies: ['React', 'CSS Modules', 'POO'],
     img: ToDo,
     link: 'https://todo-reactjs-plum.vercel.app/',
   },
   {
-    id: 9,
+    id: 10,
     title: 'Flash Cards',
     description: 'Rocketseat Nitro classes',
-    technologies: ['React JS', 'Monorepo/Turborepo', 'POO'],
+    technologies: ['React', 'Monorepo/Turborepo', 'POO'],
     img: FlashCards,
     link: 'https://flashcards-monorepo-albanogabriel.vercel.app/#',
   },
   {
-    id: 10,
+    id: 11,
     title: 'Feed App',
     description: 'Primeiros passos no React, utilizar map(), useState()...',
-    technologies: ['React JS', 'CSS Modules'],
+    technologies: ['React', 'CSS Modules'],
     img: FeedApp,
     link: 'https://01-rocketseat-feed-app-typescript.vercel.app/',
   },
   {
-    id: 11,
+    id: 12,
     title: 'Atrium Studo by xstay',
     description:
       'Primeiro projeto feito por conta própria feito através dos meus conhecimentos adquiridos',
@@ -218,7 +226,7 @@ export const cases = [
     link: 'https://21-exercicio-atrium-studios-by-xtay-landing-page-2dg5.vercel.app/',
   },
   {
-    id: 12,
+    id: 13,
     title: 'EBAC Fullstack Design',
     description: 'Clone feito em exercício do curso da EBAC',
     technologies: ['SCSS', 'Framer Motion'],
@@ -226,7 +234,7 @@ export const cases = [
     link: 'https://22-exercicio-ebac-full-stack-designer-landing-page.vercel.app/',
   },
   {
-    id: 13,
+    id: 14,
     title: 'Non Abstract Gallery',
     description: 'Galeria feita através de video no youtube',
     technologies: ['HTML', 'CSS'],
@@ -234,7 +242,7 @@ export const cases = [
     link: 'https://20-boracodar-artgallery.vercel.app/',
   },
   {
-    id: 14,
+    id: 15,
     title: 'Disney + Landing Page',
     description: 'Clone feito para curso EBAC',
     technologies: ['HTML', 'CSS', 'JS'],
@@ -242,7 +250,7 @@ export const cases = [
     link: 'https://21-landing-page-disney-8scxjw55o-albanogabriel.vercel.app/',
   },
   {
-    id: 15,
+    id: 16,
     title: 'Portfolio Gabriel',
     description: 'Portfolio usando Stats/Embed code do GitHub ',
     technologies: ['HTML', 'CSS', 'Embed code'],
@@ -250,7 +258,7 @@ export const cases = [
     link: 'https://29-react-type-script-portfolio.vercel.app/',
   },
   {
-    id: 16,
+    id: 17,
     title: 'Birthday Exercice',
     description: 'Exercício para fazer página de contagem regressiva',
     technologies: ['HTML', 'CSS', 'Embed code'],
@@ -258,7 +266,7 @@ export const cases = [
     link: 'https://22-exercicio-birthday-gabriel.vercel.app/',
   },
   {
-    id: 17,
+    id: 18,
     title: 'Netflix Clone',
     description: 'Meu primeiro clone',
     technologies: ['HTML', 'CSS'],
@@ -266,7 +274,7 @@ export const cases = [
     link: 'https://netflix-clone-eta-six.vercel.app/',
   },
   {
-    id: 18,
+    id: 19,
     title: 'Ifood LP',
     description: 'Primeiro exerício EBAC',
     technologies: ['HTML', 'CSS'],
@@ -274,7 +282,7 @@ export const cases = [
     link: 'https://14-projeto-3-ifood-jquery-bootstrap.vercel.app/',
   },
   {
-    id: 19,
+    id: 20,
     title: 'Tokyp Trip LP',
     description: 'Meu primeiro projeto no Github',
     technologies: ['HTML', 'CSS'],
