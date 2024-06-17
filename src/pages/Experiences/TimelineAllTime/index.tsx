@@ -431,11 +431,11 @@ export function TimelineAlltime() {
 
             <span>Redux</span>
             <span>Redux Toolkit</span>
-            <span>Context API + useReducer</span>
+            <span>Async Thunk</span>
             <span>Zustand</span>
 
             <small>Florianópolis, SC</small>
-            <ProgressBar progress={'30%'} />
+            <ProgressBar progress={'100%'} />
           </div>
         </div>
 
