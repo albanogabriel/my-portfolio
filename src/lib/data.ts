@@ -111,7 +111,7 @@ export const cases = [
     technologies: ['Redux Toolkit', 'Tailwind', 'Zustand'],
     img: ReduxPlayer,
     link: 'https://player-redux-sigma.vercel.app/',
-    inProgress: true,
+    inProgress: false,
   },
   {
     id: 2,
